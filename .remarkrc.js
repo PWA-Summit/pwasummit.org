@@ -17,9 +17,15 @@
 exports.plugins = [
   // Markdown linting
   // https://github.com/remarkjs/remark-lint#rules
+
+  // Peel out frontmatter
   require('remark-frontmatter', ['yaml']),
+  // Recommended linting presets
   [require('remark-preset-lint-recommended'), [2]],
+  // Ensure headers increment properly
   [require('remark-lint-heading-increment'), [2]],
+  // Only one space after list bullets
+  ['remark-lint-list-item-indent', [2, 'space']],
 
   // 3rd Party
   // prettier-ignore
