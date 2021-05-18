@@ -12,6 +12,8 @@
     "fix": "run-p *:fix",
     "js:lint": "eslint .",
     "js:fix": "eslint --fix .",
+    "css:lint": "stylelint src/sass",
+    "css:fix": "stylelint --fix src/sass",
     "prettier:lint": "prettier -c .",
     "prettier:fix": "prettier --write .",
     "md:lint": "remark -qf .",
