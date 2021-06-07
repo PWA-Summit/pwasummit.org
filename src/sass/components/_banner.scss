@@ -1,0 +1,94 @@
+.banner {
+  // These numbers come from the "banner" SVG, multiplied by two to make for a better impact as the web banner
+  /* stylelint-disable scss/dollar-variable-pattern */
+  $g0: 0.7209px;
+  $s1: 2.0397px;
+  $g1: 0.9315px;
+  $s2: 3.4557px;
+  $g2: 1.5781px;
+  $s3: 5.8548px;
+  $g3: 2.6739px;
+  $s4: 9.9194px;
+  /* stylelint-enable scss/dollar-variable-pattern */
+  $stripe-height: pxRem($s1 + $s2 + $s3 + $s4 + $g1 + $g2 + $g3);
+
+  $gradient: var(--stripe-1-1), var(--stripe-1-2) bm(pxRem($s1)), transparent bm(pxRem($s1)),
+    transparent bm(pxRem($s1 + $g1)), var(--stripe-2-1) bm(pxRem($s1 + $g1)),
+    var(--stripe-2-2) bm(pxRem($s1 + $s2 + $g1)), transparent bm(pxRem($s1 + $s2 + $g1)),
+    transparent bm(pxRem($s1 + $s2 + $g1 + $g2)), var(--stripe-3-1) bm(pxRem($s1 + $s2 + $g1 + $g2)),
+    var(--stripe-3-2) bm(pxRem($s1 + $s2 + $s3 + $g1 + $g2)),
+    transparent bm(pxRem($s1 + $s2 + $s3 + $g1 + $g2)),
+    transparent bm(pxRem($s1 + $s2 + $s3 + $g1 + $g2 + $g3)),
+    var(--stripe-4-1) bm(pxRem($s1 + $s2 + $s3 + $g1 + $g2 + $g3)),
+    var(--stripe-4-2) bm(pxRem($s1 + $s2 + $s3 + $s4 + $g1 + $g2 + $g3));
+
+  background-color: var(--white);
+  background-image: linear-gradient(to bottom, #{$gradient});
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 100% bm($stripe-height);
+  display: flex;
+  padding-bottom: bm(($stripe-height + pxRem(4.5156px)));
+  padding-top: bm(pxRem(15.2568px));
+  position: relative;
+
+  @media (min-width: 628px) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--FOOTER {
+    background-color: var(--white);
+    background-image: linear-gradient(to top, #{$gradient});
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100% bm($stripe-height);
+    color: var(--black);
+    padding-bottom: bm(pxRem(15.2568px));
+    padding-top: bm(($stripe-height + pxRem(4.5156px)));
+    position: relative;
+  }
+
+  &--title {
+    background-color: var(--white);
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    padding: bm(pxRem(4.5156px));
+    padding-left: 1rem;
+    position: relative;
+    width: clamp(15rem, 40vw, 40vw);
+    z-index: 5;
+
+    @media (min-width: 628px) {
+      display: block;
+      padding: 0;
+      width: bm(pxRem(41.4139px));
+    }
+  }
+
+  &--pwa {
+    grid-row: 1 / span 2;
+  }
+
+  &--dates {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  &--mountains {
+    $mask: url('/images/mountains-mask.svg') no-repeat right bottom
+      bm(($stripe-height + pxRem($g0))) / bm(pxRem(108.933px)) bm(pxRem(32.972px));
+    background-image: linear-gradient(to bottom, #400e89, #264f87);
+    background-position: right bottom bm(($stripe-height + pxRem($g0)));
+    background-size: bm(pxRem(108.933px)) bm(pxRem(32.972px));
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    mask: $mask;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+}

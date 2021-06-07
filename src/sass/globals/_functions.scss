@@ -1,0 +1,7 @@
+@function pxRem($size) {
+  @return $size / 16px * 1rem;
+}
+
+@function bm($size) {
+  @return calc(#{$size} * var(--banner-m, 1));
+}

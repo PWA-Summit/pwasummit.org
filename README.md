@@ -21,3 +21,7 @@ The following commands are the primary commands you're likely to run when develo
 - `src` - Site source, including Eleventy source pages (like Markdown or Nunjucks source) and asset sources (like JavaScript and Sass source)
   - `src/public` - Static site assets that should be copied as-is to the production build
 - `public` - The output build directory. Should not be committed into the codebase
+
+## Icons
+
+Icons are from [coolicons](https://github.com/krystonschwarze/coolicons) by Kryston Schwarze.

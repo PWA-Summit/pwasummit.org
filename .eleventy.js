@@ -5,6 +5,13 @@ module.exports = function (eleventy) {
   eleventy.addPlugin(eleventyNavigationPlugin);
   eleventy.setLibrary('md', markdown);
 
+  eleventy.addFilter('spanner', (text) =>
+    text
+      .split('')
+      .map((i) => `<span>${i}</span>`)
+      .join(''),
+  );
+
   return {
     dir: {
       input: 'pages',

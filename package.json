@@ -17,7 +17,7 @@
     "prettier:lint": "prettier -c .",
     "prettier:fix": "prettier --write .",
     "md:lint": "remark -qf .",
-    "vite": "vite",
+    "vite": "vite --host",
     "vite:build": "vite build --emptyOutDir"
   },
   "repository": {
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.2.0",
     "@emmetio/expand-abbreviation": "^0.7.3",
+    "autoprefixer": "^10.2.6",
     "eslint": "^7.26.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
@@ -66,6 +67,6 @@
     "stylelint-config-standard": "^22.0.0",
     "uslug": "^1.0.4",
     "vite": "^2.3.3",
-    "vite-plugin-eleventy": "^0.0.5"
+    "vite-plugin-eleventy": "^0.0.6"
   }
 }

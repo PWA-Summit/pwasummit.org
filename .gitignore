@@ -105,3 +105,6 @@ dist
 
 # Compiled output
 /public
+
+# Helper files
+.DS_Store
