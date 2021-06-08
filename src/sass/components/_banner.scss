@@ -23,10 +23,10 @@
     var(--stripe-4-2) bm(pxRem($s1 + $s2 + $s3 + $s4 + $g1 + $g2 + $g3));
 
   background-color: var(--white);
-  background-image: linear-gradient(to bottom, #{$gradient});
-  background-position: right bottom;
+  background-image: linear-gradient(to bottom, #{$gradient}), url('/images/mountains.svg');
+  background-position: right bottom, right -1px bottom bm(($stripe-height + pxRem($g0)));
   background-repeat: no-repeat;
-  background-size: 100% bm($stripe-height);
+  background-size: 100% bm($stripe-height), bm(pxRem(108.933px)) bm(pxRem(32.972px));
   display: flex;
   padding-bottom: bm(($stripe-height + pxRem(4.5156px)));
   padding-top: bm(pxRem(15.2568px));
@@ -67,6 +67,12 @@
     }
   }
 
+  &--pwa,
+  &--summit,
+  &--dates {
+    width: 100%;
+  }
+
   &--pwa {
     grid-row: 1 / span 2;
   }
@@ -74,21 +80,5 @@
   &--dates {
     grid-column: 2;
     grid-row: 2;
-  }
-
-  &--mountains {
-    $mask: url('/images/mountains-mask.svg') no-repeat right bottom
-      bm(($stripe-height + pxRem($g0))) / bm(pxRem(108.933px)) bm(pxRem(32.972px));
-    background-image: linear-gradient(to bottom, #400e89, #264f87);
-    background-position: right bottom bm(($stripe-height + pxRem($g0)));
-    background-size: bm(pxRem(108.933px)) bm(pxRem(32.972px));
-    bottom: 0;
-    content: '';
-    height: 100%;
-    left: 0;
-    mask: $mask;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
   }
 }
