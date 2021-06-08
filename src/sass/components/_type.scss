@@ -16,10 +16,6 @@
     margin-left: 1.618rem;
   }
 
-  strong {
-    font-weight: var(--weight-bold);
-  }
-
   h1,
   &--h1,
   h2,
@@ -100,4 +96,8 @@
   li + li {
     margin-top: 0;
   }
+}
+
+strong {
+  font-weight: var(--weight-bold);
 }
