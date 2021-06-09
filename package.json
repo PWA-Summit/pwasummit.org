@@ -22,7 +22,8 @@
     "prettier:njk:fix": "prettier --write '**/*.njk'",
     "md:lint": "remark -qf .",
     "vite": "vite --host",
-    "vite:build": "vite build --emptyOutDir"
+    "vite:build": "vite build --emptyOutDir",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -43,6 +44,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
     "markdown-it": "^12.0.6",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-anchor": "^7.1.0",
