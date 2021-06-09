@@ -20,6 +20,9 @@ module.exports = defineConfig({
       filename: 'sw.js',
       manifest: {
         name: 'PWA Summit',
+        short_name: 'PWA Summit',
+        description:
+          'A free, online, single-track conference focused on helping everyone succeed with Progressive Web Apps.',
         background_color: '#108484',
         theme_color: '#108484',
         display: 'minimal-ui',
