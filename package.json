@@ -14,11 +14,16 @@
     "js:fix": "eslint --fix .",
     "css:lint": "stylelint src/sass",
     "css:fix": "stylelint --fix src/sass",
-    "prettier:lint": "prettier -c .",
-    "prettier:fix": "prettier --write .",
+    "prettier:lint": "run-p prettier:*:lint",
+    "prettier:fix": "run-p prettier:*:fix",
+    "prettier:files:lint": "prettier -c .",
+    "prettier:njk:lint": "prettier -c '**/*.njk'",
+    "prettier:files:fix": "prettier --write .",
+    "prettier:njk:fix": "prettier --write '**/*.njk'",
     "md:lint": "remark -qf .",
-    "vite": "vite",
-    "vite:build": "vite build --emptyOutDir"
+    "vite": "vite --host",
+    "vite:build": "vite build --emptyOutDir",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -33,11 +38,13 @@
   "devDependencies": {
     "@11ty/eleventy-navigation": "^0.2.0",
     "@emmetio/expand-abbreviation": "^0.7.3",
+    "autoprefixer": "^10.2.6",
     "eslint": "^7.26.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
     "markdown-it": "^12.0.6",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-anchor": "^7.1.0",
@@ -66,6 +73,15 @@
     "stylelint-config-standard": "^22.0.0",
     "uslug": "^1.0.4",
     "vite": "^2.3.3",
-    "vite-plugin-eleventy": "^0.0.5"
+    "vite-plugin-eleventy": "^0.0.6",
+    "vite-plugin-pwa": "^0.7.3"
+  },
+  "dependencies": {
+    "workbox-recipes": "^6.1.5",
+    "workbox-routing": "^6.1.5",
+    "workbox-strategies": "^6.1.5"
+  },
+  "volta": {
+    "node": "14.16.1"
   }
 }

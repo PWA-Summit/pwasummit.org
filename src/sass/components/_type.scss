@@ -1,0 +1,103 @@
+.type {
+  line-height: 1.618;
+  max-width: 60ch;
+
+  // Owl spacing
+  * + * {
+    margin-top: 1.618rem;
+  }
+
+  // But no owl spacing for first item
+  :first-child > :first-child {
+    margin-top: 0;
+  }
+
+  section > :not(h1, h2, h3, h4, h5, h6, ul, li)::first-letter {
+    margin-left: 1.618rem;
+  }
+
+  h1,
+  &--h1,
+  h2,
+  &--h2,
+  h3,
+  &--h3,
+  h4,
+  &--h4,
+  h5,
+  &--h5,
+  h6,
+  &--h6 {
+    font-weight: var(--weight-normal);
+    line-height: 1.2;
+    margin-top: 1em;
+
+    a {
+      color: var(--white);
+      display: block;
+      position: relative;
+      text-decoration: none;
+
+      &:focus {
+        outline: 0;
+        text-decoration: underline;
+      }
+
+      &:hover::before,
+      &:focus::before {
+        content: '#';
+        left: -1em;
+        position: absolute;
+        top: 0;
+        width: 1em;
+      }
+    }
+  }
+
+  a {
+    color: var(--white);
+  }
+
+  h1,
+  &--h1 {
+    font-family: 'Hepta Slab', serif;
+    font-size: 4rem;
+    font-weight: var(--weight-bold);
+  }
+
+  h2,
+  &--h2 {
+    font-size: 3rem;
+  }
+
+  h3,
+  &--h3 {
+    font-size: 2.5rem;
+  }
+
+  h4,
+  &--h4 {
+    font-size: 2rem;
+  }
+
+  h5,
+  &--h5,
+  h6,
+  &--h6 {
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+  }
+
+  ul {
+    margin-left: 1.5rem;
+    padding-left: 0;
+  }
+
+  li + li {
+    margin-top: 0;
+  }
+}
+
+strong {
+  font-weight: var(--weight-bold);
+}

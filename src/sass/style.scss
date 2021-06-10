@@ -1,3 +1,15 @@
-body {
-  background: hsl(200, 30%, 95%);
-}
+// Globals
+@import './globals/vars';
+@import './globals/functions';
+
+// Components
+@import './components/reset';
+@import './components/body';
+@import './components/banner';
+@import './components/nav';
+@import './components/type';
+@import './components/footer';
+
+// Layouts
+@import './layouts/home';
+@import './layouts/markdown';
