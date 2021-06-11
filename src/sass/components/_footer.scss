@@ -7,8 +7,28 @@
   margin-top: 1rem;
   padding-top: 1rem;
 
+  &--SPONSORS {
+    border-top: 0;
+    padding-top: 0;
+  }
+
   a {
     color: currentColor;
     text-decoration: none;
+  }
+
+  &--links {
+    text-align: right;
+
+    a {
+      display: inline-block;
+      font-weight: var(--weight-bold);
+    }
+  }
+
+  &--sponsors {
+    flex-shrink: 0;
+    text-align: right;
+    width: 100%;
   }
 }
