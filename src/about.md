@@ -19,19 +19,19 @@ If you’re only slightly familiar with PWAs, we’re also offering a free half-
 We know it’s a free event, so "selling" may seem out of place, but time is money as they say, so your boss would probably like to know what kind of value you’d be getting in return for investing your day with us. To help, we’ve put together the following draft email you can send to them that will hopeful seal the deal for you:
 
 > `<manager-name>`,
-> 
+>
 > I’d like to attend PWA Summit on 7 October 2021. This conference is free to attend and will take place entirely online. Attending this event will enable me to
-> 
-> * Improve my understanding of Progressive Web Apps (PWAs), making me a more valuable asset to our organization;
-> * Learn how other organizations are using PWAs to increase engagement with their customers;
-> * Get up to speed with cutting edge and near-future PWA technologies so I can identify opportunities for us to improve our products;
-> * Learn from the mistakes of others so we can avoid making them ourselves; and
-> * Allow me to network with other web professionals to share best practices and gain new perspectives on PWAs.
-> 
+>
+> - Improve my understanding of Progressive Web Apps (PWAs), making me a more valuable asset to our organization;
+> - Learn how other organizations are using PWAs to increase engagement with their customers;
+> - Get up to speed with cutting edge and near-future PWA technologies so I can identify opportunities for us to improve our products;
+> - Learn from the mistakes of others so we can avoid making them ourselves; and
+> - Allow me to network with other web professionals to share best practices and gain new perspectives on PWAs.
+>
 > If you have any questions about PWA Summit, please let me know. I’m happy to share my learnings with you and the team as well. You can also learn more about PWA Summit at https://pwasummit.org.
 >
 > Thank you for consideration!
-> 
+>
 > Sincerely,
 > `<insert-your-name-here>`
 
@@ -45,16 +45,16 @@ Hopefully that helps. We hope to see you there!
 
 The PWA Summit is a collaboration between folks from a handful of different companies involved in the creation of PWA technologies: Google, Intel, Microsoft, and Samsung. Our steering committee is:
 
-* [Daniel Appelquist](https://twitter.com/torgo), Director of Web Advocacy at Samsung Internet
-* [Andre Bandarra](https://twitter.com/andreban), Developer Advocate at Google
-* [Diego González](https://twitter.com/diekus), Program Manager at Microsoft
-* [Aaron Gustafson](https://twitter.com/AaronGustafson), Principal Program Manager at Microsoft
-* [Adriana Jara](https://twitter.com/tropicadri), Developer Relations Engineer at Google
-* [Kathleen Khoo](https://twitter.com/KathleenKhoo), Events Coordinator at Microsoft
-* [Pete LePage](https://twitter.com/petele), Developer Advocate at Google
-* [Penny McLachlan](https://twitter.com/b1tr0t), Product Manager at Google
-* [Laura Morinigo](https://twitter.com/thisislalaok), Web Developer Advocate at Samsung Internet
-* [Sam Richard](https://twitter.com/snugug), Developer Relations Engineer at Google
-* [Kenneth Rohde Christiansen](https://twitter.com/kennethrohde), Web Platform Architect at Intel
-* [David Rousset](https://twitter.com/davrous), Senior Program Manager at Microsoft
-* [Maxim Salnikov](https://twitter.com/webmaxru), Developer Engagement Lead at Microsoft
+- [Daniel Appelquist](https://twitter.com/torgo), Director of Web Advocacy at Samsung Internet
+- [Andre Bandarra](https://twitter.com/andreban), Developer Advocate at Google
+- [Diego González](https://twitter.com/diekus), Program Manager at Microsoft
+- [Aaron Gustafson](https://twitter.com/AaronGustafson), Principal Program Manager at Microsoft
+- [Adriana Jara](https://twitter.com/tropicadri), Developer Relations Engineer at Google
+- [Kathleen Khoo](https://twitter.com/KathleenKhoo), Events Coordinator at Microsoft
+- [Pete LePage](https://twitter.com/petele), Developer Advocate at Google
+- [Penny McLachlan](https://twitter.com/b1tr0t), Product Manager at Google
+- [Laura Morinigo](https://twitter.com/thisislalaok), Web Developer Advocate at Samsung Internet
+- [Sam Richard](https://twitter.com/snugug), Developer Relations Engineer at Google
+- [Kenneth Rohde Christiansen](https://twitter.com/kennethrohde), Web Platform Architect at Intel
+- [David Rousset](https://twitter.com/davrous), Senior Program Manager at Microsoft
+- [Maxim Salnikov](https://twitter.com/webmaxru), Developer Engagement Lead at Microsoft
