@@ -1,9 +1,12 @@
 ---
 title: About the PWA Summit
-layout: wrapper.njk
+layout: markdown.njk
+eleventyNavigation:
+  key: About the PWA Summit
+  parent: Main
 ---
 
-# Why should I attend the PWA Summit?
+## Why should I attend the PWA Summit?
 
 The PWA Summit’s mission is to help you be successful with Progressive Web Apps. We created this event to help spread the word about PWAs—how to successfully build them and how to integrate them into your existing web and/or app strategy. We aren’t here to sell you on a particular framework or tech stack; in fact, we’re not trying to sell you anything… the event is free!
 
@@ -11,11 +14,11 @@ The PWA Summit’s organizers are a group of industry experts that believe in th
 
 If you’re only slightly familiar with PWAs, we’re also offering a free half-day workshop the day before the event that will help you get your bearings when it comes to Web App Manifests, Service Workers, the Cache API, and more. Over the course of the workshop, you’ll be writing the code that will take your own web project from zero to PWA.
 
-# How can I sell my boss on letting me attend the PWA Summit?
+## How can I sell my boss on letting me attend the PWA Summit?
 
 We know it’s a free event, so "selling" may seem out of place, but time is money as they say, so your boss would probably like to know what kind of value you’d be getting in return for investing your day with us. To help, we’ve put together the following draft email you can send to them that will hopeful seal the deal for you:
 
-> <manager-name>,
+> `<manager-name>`,
 > 
 > I’d like to attend PWA Summit on 7 October 2021. This conference is free to attend and will take place entirely online. Attending this event will enable me to
 > 
@@ -30,15 +33,15 @@ We know it’s a free event, so "selling" may seem out of place, but time is mon
 > Thank you for consideration!
 > 
 > Sincerely,
-> <insert-your-name-here>
+> `<insert-your-name-here>`
 
 If you’re interested in attending the workshop too, you might consider including something like this:
 
-> As we are not currently working with Progressive Web Apps, I’d also like to attend the free half-day workshop on October 6th. In the workshop, I’ll get up to speed with the basics of building a PWA and get hands-on experience turning an existing web project into one. This is a great opportunity to see what <insert-the-name-of-a-project-you-work-on> would be like as a PWA (and to jumpstart its development).
+> As we are not currently working with Progressive Web Apps, I’d also like to attend the free half-day workshop on October 6th. In the workshop, I’ll get up to speed with the basics of building a PWA and get hands-on experience turning an existing web project into one. This is a great opportunity to see what `<insert-the-name-of-a-project-you-work-on>` would be like as a PWA (and to jumpstart its development).
 
 Hopefully that helps. We hope to see you there!
 
-# Who is organizing the PWA Summit?
+## Who is organizing the PWA Summit?
 
 The PWA Summit is a collaboration between folks from a handful of different companies involved in the creation of PWA technologies: Google, Intel, Microsoft, and Samsung. Our steering committee is:
 
