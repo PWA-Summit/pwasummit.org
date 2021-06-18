@@ -27,8 +27,16 @@
   }
 
   &--sponsors {
+    align-items: center;
+    display: flex;
     flex-shrink: 0;
+    gap: 0.25em;
+    justify-content: flex-end;
     text-align: right;
     width: 100%;
+  }
+
+  &--logo {
+    height: 1.25em;
   }
 }
