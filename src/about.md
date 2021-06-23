@@ -50,7 +50,7 @@ The PWA Summit is a collaboration between folks from a handful of different comp
 - [Diego González](https://twitter.com/diekus), Program Manager at Microsoft
 - [Aaron Gustafson](https://twitter.com/AaronGustafson), Principal Program Manager at Microsoft
 - [Adriana Jara](https://twitter.com/tropicadri), Developer Relations Engineer at Google
-- [Kathleen Khoo](https://twitter.com/KathleenKhoo), Events Coordinator at Microsoft
+- [Kathleen Khoo](https://twitter.com/KathleenKhoo), Events Programs Manager at Microsoft
 - [Pete LePage](https://twitter.com/petele), Developer Advocate at Google
 - [Penny McLachlan](https://twitter.com/b1tr0t), Product Manager at Google
 - [Laura Morinigo](https://twitter.com/thisislalaok), Web Developer Advocate at Samsung Internet
