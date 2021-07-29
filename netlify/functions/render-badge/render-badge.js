@@ -40,7 +40,9 @@ const handler = async (event) => {
       api_secret: process.env.CLOUDINARY_SECRET,
     });
 
-    cloudinary.uploader.upload(
+    console.log(process.env.CLOUDINARY_KEY);
+
+    await cloudinary.uploader.upload(
       'netlify/functions/render-badge/assets/badge-bg.png',
       {
         folder: `${eventName}/${eventYear}`,
@@ -84,11 +86,13 @@ const handler = async (event) => {
         console.log(error, result);
       },
     );
+    console.log('Render request was sent');
     return {
       statusCode: 200,
       body: JSON.stringify({ result: 'Render request was sent' }),
     };
   } catch (error) {
+    console.log(error.toString());
     return {
       statusCode: 500,
       body: JSON.stringify({
