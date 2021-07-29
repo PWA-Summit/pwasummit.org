@@ -23,7 +23,7 @@ export function onRequest(event) {
       content="This is a digital badge confirming my participation in PWA Summit 2021 - a free, online, single-track conference focused on helping everyone succeed with Progressive Web Apps. Get your ticket here ->"
     />
   </head>
-  <body style="background-color: #ffffff; background-image: url(https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2021/${ticketId}.png); background-position: center top; background-repeat: no-repeat; background-size: contain;">
+  <body style="background-color: #ffffff; background-image: url(https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2021/${ticketId2}.png); background-position: center top; background-repeat: no-repeat; background-size: contain;">
     
   </body>
 </html>`;
