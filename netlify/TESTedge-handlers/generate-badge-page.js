@@ -26,11 +26,14 @@ export function onRequest(event) {
   </head>
   <body style="background-color: #ffffff; background-image: url(https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2021/${ticketId2}.png); background-position: center top; background-repeat: no-repeat; background-size: contain;height: 100%;">
 
-  <tito-widget event="pwasummit/2021" releases="free-conference-ticket-october-7">Get your free ticket</tito-widget>
-
-  <noscript>
-    <a href="https://ti.to/pwasummit/2021/preview">Get your free ticket</a>
-  </noscript>
+  <div style="position: absolute; bottom: 20px; text-align: center">
+    <tito-widget event="pwasummit/2021" releases="free-conference-ticket-october-7"
+      >Get your free ticket</tito-widget
+    >
+    <noscript>
+      <a href="https://ti.to/pwasummit/2021/preview">Get your free ticket</a>
+    </noscript>
+  </div>
     
   </body>
 </html>`;
