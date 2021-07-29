@@ -83,7 +83,7 @@ const handler = async (event) => {
         ],
       },
       (error, result) => {
-        console.log(error, result);
+        console.error(error, result);
       },
     );
     return {
