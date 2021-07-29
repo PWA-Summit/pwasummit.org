@@ -7,7 +7,7 @@ export function onRequest(event) {
   const ticketId2 = event.requestMeta.url.search.substring(1);
 
   const html = `<!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,8 +22,15 @@ export function onRequest(event) {
       property="og:description"
       content="This is a digital badge confirming my participation in PWA Summit 2021 - a free, online, single-track conference focused on helping everyone succeed with Progressive Web Apps. Get your ticket here ->"
     />
+    <script src='https://js.tito.io/v2' async></script>
   </head>
-  <body style="background-color: #ffffff; background-image: url(https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2021/${ticketId2}.png); background-position: center top; background-repeat: no-repeat; background-size: contain;">
+  <body style="background-color: #ffffff; background-image: url(https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2021/${ticketId2}.png); background-position: center top; background-repeat: no-repeat; background-size: contain;height: 100%;">
+
+  <tito-widget event="pwasummit/2021" releases="free-conference-ticket-october-7">Get your free ticket</tito-widget>
+
+  <noscript>
+    <a href="https://ti.to/pwasummit/2021/preview">Get your free ticket</a>
+  </noscript>
     
   </body>
 </html>`;
