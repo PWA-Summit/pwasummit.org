@@ -40,7 +40,6 @@ const handler = async (event) => {
       api_secret: process.env.CLOUDINARY_SECRET,
     });
 
-    console.log(process.env.CLOUDINARY_KEY);
 
     await cloudinary.uploader.upload(
       'netlify/functions/render-badge/assets/badge-bg.png',
