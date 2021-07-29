@@ -86,7 +86,6 @@ const handler = async (event) => {
         console.log(error, result);
       },
     );
-    console.log('Render request was sent');
     return {
       statusCode: 200,
       body: JSON.stringify({ result: 'Render request was sent' }),
