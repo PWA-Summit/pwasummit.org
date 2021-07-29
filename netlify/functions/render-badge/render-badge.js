@@ -8,7 +8,7 @@ const handler = async (event) => {
         }),
       };
     }
-    require('dotenv').config();
+    //require('dotenv').config();
 
     const cloudinary = require('cloudinary').v2;
 
