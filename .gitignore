@@ -108,3 +108,4 @@ dist
 
 # Helper files
 .DS_Store
+.netlify
