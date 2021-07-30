@@ -24,4 +24,4 @@ The following commands are the primary commands you're likely to run when develo
 
 ## Icons
 
-Icons are from [coolicons](https://github.com/krystonschwarze/coolicons) by Kryston Schwarze.
+Icons are from [Material Icons](https://fonts.google.com/icons) by Google licensed under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
