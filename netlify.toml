@@ -1,3 +1,5 @@
-[[TESTedge_handlers]]
-  path = "/badge/*"
-  handler = "generate-badge-page"
+[[redirects]]
+  from = "/badge/*"
+  to = "/.netlify/functions/generate-badge-page"
+  status = 200
+  force = true
