@@ -2,7 +2,7 @@
 title: About the PWA Summit
 layout: markdown.njk
 eleventyNavigation:
-  key: About the PWA Summit
+  key: About
   parent: Main
 ---
 
