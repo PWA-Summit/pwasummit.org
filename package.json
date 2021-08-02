@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/PWA-Summit/2021.pwasummit.org#readme",
   "devDependencies": {
+    "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-navigation": "^0.2.0",
     "@emmetio/expand-abbreviation": "^0.7.3",
     "autoprefixer": "^10.2.6",
