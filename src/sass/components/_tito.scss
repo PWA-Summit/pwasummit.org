@@ -1,0 +1,100 @@
+.tito {
+  $vertical-rhythm: 1rem;
+
+  &-wrapper {
+    font-size: 1.5rem;
+    margin-top: $vertical-rhythm * 2;
+  }
+
+  &-ticket {
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 438px) {
+      gap: 2rem;
+      grid-template-columns: minmax(auto, 45ch) 1fr;
+    }
+
+    &:not(:first-of-type) {
+      border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+      padding-top: $vertical-rhythm;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: $vertical-rhythm;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-name {
+      font-size: 1.25em;
+    }
+
+    &-description {
+      font-size: 0.75em;
+    }
+
+    &-price-quantity {
+      align-items: center;
+      display: flex;
+      gap: 2rem;
+      justify-content: flex-end;
+    }
+
+    &-quantity {
+      display: flex;
+    }
+  }
+
+  &-checkbox {
+    height: 1em;
+    position: relative;
+    width: 1em;
+
+    &::before {
+      background-color: var(--white);
+      content: '';
+      display: block;
+      height: 1em;
+      width: 1em;
+    }
+
+    &:checked::before {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="hsl(213, 57%, 34%) "/></svg>');
+    }
+  }
+
+  &-submit {
+    background-color: var(--stripe-1-1);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 var(--black);
+    color: var(--white);
+    padding: 0.25em 0.5em;
+    text-shadow: 2px 2px 0 var(--black);
+
+    &-wrapper {
+      border-top: 1px solid hsla(0, 0%, 100%, 0.5);
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1rem;
+      padding-top: $vertical-rhythm;
+    }
+  }
+
+  &-badge-link {
+    display: flex;
+    display: block;
+    font-size: 0.75em;
+    margin-top: $vertical-rhythm;
+    text-align: right;
+    width: 100%;
+
+    a {
+      color: var(--white);
+    }
+  }
+}
