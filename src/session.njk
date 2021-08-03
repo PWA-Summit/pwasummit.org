@@ -7,34 +7,30 @@ pagination:
 permalink: sessions/{{ session.title | slug }}/index.html
 ---
 
-<h1 class="type--h1">{{session.title}}</h1>
+{% from "speaker.njk" import links as speakerLinks %}
 
-<p class="sessions--start">
-  {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt, {hour:
-  "numeric", minute: 'numeric'} %}
-</p>
+<div class="_session">
+  <div class="_session--info">
+    <h1 class="type--h1">{{session.title}}</h1>
+    <p class="sessions--start">
+      {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt,
+      {hour: "numeric", minute: 'numeric'} %}
+    </p>
+    <div>{{session.description | md | safe }}</div>
+  </div>
 
-<div>{{session.description | md | safe }}</div>
+  <ul class="_session--speakers">
+    {% for speaker in session | speakers(sessionize.speakers) %}
+    <li class="_session--speaker">
+      <p class="_session--name type--h4">{{speaker.fullName}}</p>
+      <img class="_session--picture" src="{{speaker.profilePicture}}" alt="" />
+      <p class="_session--tag">{{speaker.tagLine}}</p>
+      <div class="_session--speaker-links">{{ speakerLinks(speaker) }}</div>
 
-<ul class="session--speakers">
-  {% for speaker in session | speakers(sessionize.speakers) %}
-  <li class="sessions--speaker">
-    <img class="sessions--picture" src="{{speaker.profilePicture}}" alt="" />
-    <p class="sessions--name">{{speaker.fullName}}</p>
-    <p class="speaker--tag">{{speaker.tagLine}}</p>
-    {% if speaker.tagLine != speaker.bio %}
-    <div class="bio type">{{speaker.bio | md | safe }}</div>
-    {% endif %} {% if speaker.links.length > 0 %}
-    <ul class="sessions--links">
-      {% for link in speaker.links %}
-      <li class="sessions--link">
-        <a data-type="{{link.linkType | slug }}" href="{{link.url}}" target="_blank"
-          >{{link.title}}</a
-        >
-      </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
+      {% if speaker.tagLine != speaker.bio %}
+      <div class="_session--bio type">{{speaker.bio | md | safe }}</div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

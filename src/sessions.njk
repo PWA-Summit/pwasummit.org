@@ -7,7 +7,15 @@ eleventyNavigation:
   order: -2
 ---
 
-<h1 class="type--h1">Sessions</h1>
+<div class="sessions--header">
+  <h1 class="type--h1">Sessions</h1>
+  <select name="timezone" id="timezone">
+    <option value="local">Local</option>
+    <option value="GMT">GMT</option>
+    <option value="America/New_York">New York</option>
+    <option value="America/Los_Angeles">Los Angeles</option>
+  </select>
+</div>
 
 {% for day in sessionize.schedule %}
 <h2 class="type--h2">

@@ -6,6 +6,10 @@ function formatDate(date, options = {}) {
     date = new Date(date);
   }
 
+  if (!('zimeZone' in options)) {
+    options.timeZone = 'UTC';
+  }
+
   return date.toLocaleDateString(options.locale || 'en-US', options);
 }
 
@@ -59,7 +63,7 @@ module.exports = function (eleventy) {
 
   return {
     dir: {
-      input: 'pages',
+      input: 'src',
       output: 'src',
       data: '../_data',
       includes: '../templates/_includes',
