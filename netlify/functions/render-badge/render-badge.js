@@ -76,7 +76,7 @@ const handler = async (event) => {
             font_family: 'Work Sans',
             font_size: firstName.length > 11 || lastName.length > 11 ? 63 : 73,
             font_weight: 'medium',
-            text: [firstName, lastName].join(' ').toUpperCase(),
+            text: [firstName, lastName].join('%0A').toUpperCase(),
             text_align: 'center',
           },
           width: 650,
