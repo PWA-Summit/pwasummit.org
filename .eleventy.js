@@ -66,6 +66,8 @@ module.exports = function (eleventy) {
       )}</span>`,
   );
 
+  eleventy.addShortcode('timezone', () => `<span data-timezone="UTC">UTC</span>`);
+
   return {
     dir: {
       input: 'src',

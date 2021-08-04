@@ -13,8 +13,9 @@ permalink: sessions/{{ session.title | slugify }}/index.html
   <div class="_session--info">
     <h1 class="type--h1">{{session.title}}</h1>
     <p class="sessions--start">
-      {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt,
-      {hour: "numeric", minute: 'numeric'} %}
+      {% date session.startsAt, {month: 'long', day: 'numeric', year: 'numeric'} %}, {% time
+      session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt, {hour:
+      "numeric", minute: 'numeric'} %} ({% timezone %})
     </p>
     <div>{{session.description | md | safe }}</div>
   </div>

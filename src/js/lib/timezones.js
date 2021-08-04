@@ -19,6 +19,7 @@ export class TimezoneChanger {
       date: new Date(el.dataset.date),
       format: JSON.parse(el.dataset.format),
     }));
+    this.timezones = Array.from(document.querySelectorAll('[data-timezone]'));
 
     if (changer) {
       changer.addEventListener('change', this.changeTZ.bind(this));
@@ -32,11 +33,12 @@ export class TimezoneChanger {
    */
   async init() {
     const offset = new Date().getTimezoneOffset();
-    const local = `Local (GMT${offset > 0 ? '+' : '-'}${Math.floor(offset / 60)
+    this.local = `GMT${offset > 0 ? '+' : '-'}${Math.floor(offset / 60)
       .toString()
       .padStart(2, 0)}:${Math.floor(offset % 60)
       .toString()
-      .padStart(2, 0)})`;
+      .padStart(2, 0)}`;
+    const local = `Local (${this.local})`;
 
     const tz = await get('timezone');
 
@@ -52,7 +54,7 @@ export class TimezoneChanger {
       }
     }
 
-    if (tz) {
+    if (tz && tz !== 'local') {
       this.updateForTimezone(tz);
     } else {
       this.updateForTimezone();
@@ -69,6 +71,16 @@ export class TimezoneChanger {
     }
     for (const d of this.dates) {
       d.el.textContent = d.date.toLocaleDateString('en-US', Object.assign(d.format, { timeZone }));
+    }
+
+    if (timeZone) {
+      for (const t of this.timezones) {
+        t.textContent = timeZone;
+      }
+    } else {
+      for (const t of this.timezones) {
+        t.textContent = this.local;
+      }
     }
   }
 
