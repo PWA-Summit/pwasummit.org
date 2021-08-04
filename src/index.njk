@@ -48,3 +48,62 @@ layout: wrapper.njk
   <div class="_home--rect _home--rect__7"></div>
   <div class="_home--rect _home--rect__8"></div>
 </div>
+
+<table class="schedule">
+  <caption colspan="3" class="schedule--caption">
+    <div class="schedule--caption-wrapper">
+      <span class="schedule--title type--h1">Schedule</span>
+      <select class="schedule--timezone" name="timezone" id="timezone">
+        <option value="local">Local</option>
+        <option value="GMT">GMT</option>
+        <option value="America/New_York">New York</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
+      </select>
+    </div>
+  </caption>
+  <thead>
+    <tr>
+      <th>Start Time</th>
+      <th>Session</th>
+      <th>Speakers</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for day in sessionize.schedule %}
+    <tr>
+      <td class="schedule--day" colspan="3">
+        {% date day.date, {month: 'long', day: 'numeric', year: 'numeric', weekday: 'long'} %}
+      </td>
+    </tr>
+    {% for session in day.rooms[0].sessions %} {% set even = false %} {% if loop.index % 2 == 0 %}
+    {% set even = true %} {% endif %}
+    <tr data-even="{{even}}">
+      <td class="schedule--time">
+        {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %}
+      </td>
+      {% if session.isServiceSession == false %}
+      <td>
+        <a class="schedule--link" href="/sessions/{{session.title | slugify }}"
+          >{{session.title}}</a
+        >
+      </td>
+      {% else %}
+      <td>{{session.title}}</td>
+      {% endif %}
+      <td>
+        <ul class="schedule--speakers">
+          {% for speaker in session | speakers(sessionize.speakers) %}
+          <li class="schedule--speaker">
+            <img
+              class="schedule--picture"
+              src="{{speaker.profilePicture}}"
+              alt="{{speaker.fullName}}"
+            />
+          </li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+    {% endfor %} {% endfor %}
+  </tbody>
+</table>
