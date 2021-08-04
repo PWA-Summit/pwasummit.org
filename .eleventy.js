@@ -1,5 +1,6 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const markdown = require('./lib/markdown');
+const slugify = require('slugify');
 
 function formatDate(date, options = {}) {
   if (!(date instanceof Date)) {
@@ -42,6 +43,10 @@ module.exports = function (eleventy) {
   eleventy.addFilter('time', formatTime);
 
   eleventy.addFilter('md', (text) => markdown.render(text));
+
+  eleventy.addFilter('slugify', (text) =>
+    slugify(text, { lower: true, remove: /[_*+~.()'"!:@]/g, strict: true }),
+  );
 
   eleventy.addShortcode(
     'date',

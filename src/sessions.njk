@@ -27,7 +27,7 @@ eleventyNavigation:
   <li class="sessions--session">
     <div class="session--info">
       <h3 class="sessions--title type--h3">
-        <a href="/sessions/{{session.title | slug }}">{{session.title}}</a>
+        <a href="/sessions/{{session.title | slugify }}">{{session.title}}</a>
       </h3>
       <p class="sessions--start">
         {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt,
