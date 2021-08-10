@@ -1,17 +1,26 @@
 .schedule {
-  background-color: var(--white);
   border: 0;
   border-collapse: collapse;
-  border-radius: 0 0 5px 5px;
-  color: var(--black);
-  margin-top: -5vh;
+  color: var(--white);
 
-  tr {
-    border: 0;
+  th {
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+    font-size: smaller;
+    font-weight: var(--weight-normal);
+    padding: 0 0 0.5rem;
+    text-align: center;
+
+    @media (max-width: 400px) {
+      display: none;
+    }
   }
 
   [data-even='true'] {
-    background-color: hsla(213, 57%, 34%, 0.15);
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  [data-even='false'] {
+    background-color: rgba(0, 0, 0, 0.1);
   }
 
   td {
@@ -26,17 +35,15 @@
   }
 
   &--caption {
-    background-color: var(--white);
-    border-radius: 5px 5px 0 0;
-    color: var(--black);
+    color: var(--white);
+    margin-bottom: 1rem;
 
     &-wrapper {
       align-items: center;
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      padding: 1rem;
-      // justify-content: center;
+      justify-content: space-between;
 
       @media (min-width: 605px) {
         flex-wrap: nowrap;
@@ -45,16 +52,41 @@
   }
 
   &--link {
-    color: var(--black);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    color: var(--white);
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+
+  &--link:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
   }
 
   &--time {
     font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  &--time-desktop {
+    @media (max-width: 400px) {
+      display: none;
+    }
+  }
+
+  &--time-mobile {
+    @media (min-width: 401px) {
+      display: none;
+    }
+
+    [data-format] {
+      min-height: auto;
+    }
   }
 
   &--day {
-    background-color: hsla(180, 79%, 5%, 0.15);
+    background-color: var(--stripe-3-1);
     font-weight: var(--weight-bold);
+    padding: 0.5rem 1rem;
   }
 
   &--title {
@@ -63,25 +95,36 @@
 
   &--timezone {
     justify-self: flex-end;
-    margin-left: auto;
+
+    @media (max-width: 400px) {
+      justify-self: flex-start;
+    }
   }
 
   &--speakers {
     // flex-wrap: wrap;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
     width: calc(150px + 1rem);
+
+    @media (max-width: 400px) {
+      width: calc(50px + 1rem);
+    }
+  }
+
+  &--speaker {
+    flex-shrink: 0;
   }
 
   &--picture {
     border: 5px solid var(--stripe-1-1);
     border-radius: 50%;
-    flex-shrink: 0;
     height: 50px;
     width: 50px;
   }
