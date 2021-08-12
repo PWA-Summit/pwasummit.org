@@ -33,7 +33,7 @@ export class TimezoneChanger {
    */
   async init() {
     const offset = new Date().getTimezoneOffset();
-    this.local = `GMT${offset > 0 ? '+' : '-'}${Math.floor(offset / 60)
+    this.local = `GMT${offset > 0 ? '-' : '+'}${Math.floor(offset / 60)
       .toString()
       .padStart(2, 0)}:${Math.floor(offset % 60)
       .toString()
