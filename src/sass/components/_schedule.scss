@@ -5,6 +5,10 @@
   border-radius: 0 0 5px 5px;
   color: var(--black);
   margin-top: -5vh;
+  max-width: calc(100vw - 2rem);
+  overflow-x: hidden;
+  width: 100%;
+  // table-layout: fixed;
 
   tr {
     border: 0;
@@ -14,9 +18,20 @@
     background-color: hsla(213, 57%, 34%, 0.15);
   }
 
+  th,
   td {
     border: 0;
     padding: 0.5rem 1rem;
+
+    &:first-of-type {
+      width: 7rem;
+    }
+
+    &:nth-of-type(3) {
+      @media (max-width: 467px) {
+        display: none;
+      }
+    }
   }
 
   [data-format] {
@@ -59,6 +74,9 @@
 
   &--title {
     margin-top: 0;
+    @media (max-width: 467px) {
+      font-size: 3rem;
+    }
   }
 
   &--timezone {
@@ -67,15 +85,19 @@
   }
 
   &--speakers {
-    // flex-wrap: wrap;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
     width: calc(150px + 1rem);
+  }
+
+  &--speaker {
+    flex-shrink: 0;
   }
 
   &--picture {
