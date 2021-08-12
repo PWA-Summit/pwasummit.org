@@ -22,7 +22,6 @@ export class Schedule {
    */
   toggleSpeakers() {
     const width = window.innerWidth;
-    console.log(this.days);
 
     if (width <= 467) {
       for (const day of this.days) {
