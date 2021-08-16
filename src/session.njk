@@ -5,6 +5,8 @@ pagination:
   size: 1
   alias: session
 permalink: sessions/{{ session.title | slugify }}/index.html
+eleventyComputed:
+  ogimage: https://pwasummit.org/images/share/{{ session.id }}.jpg
 ---
 
 {% from "speaker.njk" import links as speakerLinks %}

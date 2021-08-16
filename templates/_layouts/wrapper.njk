@@ -16,7 +16,11 @@
     <meta property="og:title" content="PWA Summit, October 6-7" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pwasummit.org/" />
+    {% if ogimage %}
+    <meta property="og:image" content="{{ogimage}}" />
+    {% else %}
     <meta property="og:image" content="https://pwasummit.org/images/social.jpg" />
+    {% endif %}
     <meta
       property="og:description"
       content="A free, online, single-track conference focused on helping everyone succeed with Progressive Web Apps."
