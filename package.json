@@ -36,6 +36,7 @@
   },
   "homepage": "https://github.com/PWA-Summit/2021.pwasummit.org#readme",
   "devDependencies": {
+    "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-navigation": "^0.2.0",
     "@emmetio/expand-abbreviation": "^0.7.3",
     "@netlify/functions": "^0.7.2",
@@ -69,17 +70,19 @@
     "remark-lint-prohibited-strings": "^2.0.0",
     "remark-preset-lint-recommended": "^5.0.0",
     "sass": "^1.32.13",
+    "slugify": "^1.6.0",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0",
     "uslug": "^1.0.4",
     "vite": "^2.3.3",
-    "vite-plugin-eleventy": "^0.0.6",
+    "vite-plugin-eleventy": "^0.0.9",
     "vite-plugin-pwa": "^0.7.3"
   },
   "dependencies": {
     "cloudinary": "^1.26.2",
     "dotenv": "^10.0.0",
+    "idb-keyval": "^5.1.3",
     "workbox-recipes": "^6.1.5",
     "workbox-routing": "^6.1.5",
     "workbox-strategies": "^6.1.5"

@@ -4,11 +4,22 @@
   display: grid;
   grid-gap: 0;
   grid-template-columns: #{$width} 0.5fr #{$width} 0.5fr #{$width} 1fr #{$width};
-  grid-template-rows: 0.6fr 0.4fr #{$width} repeat(3, 1fr #{$width}) 0.4fr 0.4fr 0.6fr;
-  height: 80vh;
+  grid-template-rows: 3.6rem 2.4rem #{$width} auto #{$width} auto 2.4rem 3.6rem;
+
   margin: 5vh auto;
+  max-height: 55vh;
   max-width: 700px;
+  min-height: 30rem;
   width: 100%;
+
+  @supports (width: clamp(1px, 1vw, 2px)) {
+    grid-template-rows:
+      clamp(2.4rem, 8vw, 3.6rem)
+      clamp(1.6rem, 8vw, 2.4rem)
+      #{$width} auto #{$width} auto
+      clamp(1.6rem, 8vw, 2.4rem)
+      clamp(2.4rem, 8vw, 3.6rem);
+  }
 
   @media (min-width: 618px) {
     width: 80vw;
@@ -22,6 +33,21 @@
     fill: var(--white);
   }
 
+  &--ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    grid-column: 4 / span 3;
+    grid-row: 6 / span 1;
+
+    padding: 1rem;
+    padding-bottom: 0;
+
+    @media (min-width: 528px) {
+      grid-column: 6 / span 1;
+    }
+  }
+
   &--save,
   &--cfp {
     align-items: center;
@@ -31,24 +57,13 @@
     gap: 1rem;
     grid-column: 4 / span 3;
     justify-content: flex-end;
-    padding: 0 1rem;
+    text-align: right;
     text-decoration: none;
-
-    @media (min-width: 528px) {
-      grid-column: 6 / span 1;
-    }
   }
 
   &--save {
     align-self: flex-end;
-    grid-row: 10 / span 1;
-  }
-
-  &--cfp {
-    align-self: flex-start;
-    grid-row: 11 / span 1;
-    margin-top: 1rem;
-    text-align: right;
+    grid-row: 6 / span 1;
   }
 
   &--rect {
@@ -65,7 +80,7 @@
     }
 
     &__4 {
-      grid-row: 9 / span 1;
+      grid-row: 5 / span 1;
     }
 
     &__5 {
@@ -81,7 +96,7 @@
 
     &__7 {
       grid-column: 3 / span 1;
-      grid-row: 9 / -1;
+      grid-row: 5 / -1;
 
       @media (min-width: 528px) {
         grid-column: 5 / span 1;
@@ -90,7 +105,7 @@
 
     &__8 {
       grid-column: 7 / span 1;
-      grid-row: 10 / span 2;
+      grid-row: 6 / span 2;
     }
   }
 
@@ -104,14 +119,18 @@
     width: 100%;
   }
 
+  &--text {
+    grid-column: 2 / -2;
+    grid-row-start: 4;
+  }
+
   &--title {
     align-self: center;
     display: flex;
     font-family: 'Hepta Slab', serif;
     font-size: 2.5rem;
     font-weight: var(--weight-bold);
-    grid-column: 2 / -2;
-    grid-row-start: 4;
+
     justify-content: space-between;
     justify-self: center;
     text-align: justify;
@@ -147,12 +166,14 @@
 
   &--where {
     align-self: center;
+    border-top: calc(#{$width}) solid var(--white);
     font-size: 1.5rem;
     grid-column: 2 / -2;
     grid-row-start: 8;
     letter-spacing: -1px;
+    padding: #{$width} 1rem;
     text-align: justify;
-    transform: rotate($rotate);
-    width: 100%;
+    transform: rotate($rotate) translatex(calc(#{$width} * -1));
+    width: calc(100% + #{$width} + #{$width});
   }
 }

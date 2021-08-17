@@ -24,4 +24,6 @@ The following commands are the primary commands you're likely to run when develo
 
 ## Icons
 
-Icons are from [Material Icons](https://fonts.google.com/icons) by Google licensed under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
+Unless otherwise noted, icons are from [Material Icons](https://fonts.google.com/icons) by Google and are licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
+
+The Twitter, LinkedIn, and Home icons are from [Coolicons](https://coolicons.cool/) by Kryston Schwarze and are licensed under the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).

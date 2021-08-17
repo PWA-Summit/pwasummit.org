@@ -1,0 +1,13 @@
+{% macro links (speaker) %} {% if speaker.links.length > 0 %}
+<ul class="speaker-links">
+  {% for link in speaker.links %}
+  <li class="speaker-links--item">
+    <a class="speaker-links--link" href="{{link.url}}" target="_blank" aria-label="{{link.title}}">
+      <svg role="img" aria-hidden="true" class="speaker-links--icon">
+        <use xlink:href="#icons--{{ link.linkType | slug }}"></use>
+      </svg>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %} {% endmacro %}
