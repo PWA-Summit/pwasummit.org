@@ -14,6 +14,13 @@
     @media (min-width: 615px) {
       grid-column: 1 / span 2;
     }
+
+    h1 {
+      @media (max-width: 614px) {
+        font-size: 3rem;
+        hyphens: auto;
+      }
+    }
   }
 
   &--speakers {
