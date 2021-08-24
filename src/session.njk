@@ -8,6 +8,7 @@ permalink: sessions/{{ session.title | slugify }}/index.html
 eleventyComputed:
   ogimage: https://pwasummit.org/images/share/{{ session.id }}.jpg
   title: '{{session.title}}'
+  metadescription: '{{session.description}}'
 ---
 
 {% from "speaker.njk" import links as speakerLinks %}
