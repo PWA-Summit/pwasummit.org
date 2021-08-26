@@ -17,16 +17,23 @@
     />
     <meta property="og:title" content="{{t}}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://pwasummit.org/" />
+    <meta property="og:url" content="https://pwasummit.org{{page.url}}" />
     {% if ogimage %}
     <meta property="og:image" content="{{ogimage}}" />
+    <meta name="twitter:image" content="{{ogimage}}" />
     {% else %}
     <meta property="og:image" content="https://pwasummit.org/images/social.jpg" />
+    <meta name="twitter:image" content="https://pwasummit.org/images/social.jpg" />
     {% endif %} {% set d = 'PWA Summit is a free, online, single-track conference focused on helping
     everyone succeed with Progressive Web Apps.' %} {% if metadescription %} {% set d =
     metadescription + ' This session is part of PWA Summit. ' + d %} {% endif %}
     <meta name="description" content="{{d}}" />
     <meta property="og:description" content="{{d}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@pwasummit" />
+    <meta name="twitter:creator" content="@pwasummit" />
+    <meta name="twitter:title" content="{{t}}" />
+    <meta name="twitter:description" content="{{d}}" />
   </head>
   <body>
     <header class="banner">
