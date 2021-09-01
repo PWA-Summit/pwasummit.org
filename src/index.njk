@@ -78,7 +78,7 @@ layout: wrapper.njk
     </tr>
     {% for session in day.rooms[0].sessions %} {% set even = false %} {% if loop.index % 2 == 0 %}
     {% set even = true %} {% endif %}
-    <tr data-even="{{even}}">
+    <tr data-even="{{even}}" data-starts="{{session.startsAt}}" data-ends="{{session.endsAt}}">
       <td class="schedule--time">
         {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %}
       </td>
@@ -108,3 +108,33 @@ layout: wrapper.njk
     {% endfor %} {% endfor %}
   </tbody>
 </table>
+
+<script>
+  (function (window, document) {
+    var $sessions = [].slice.call(document.querySelectorAll('tr[data-starts][data-ends]'));
+    // update the schedule
+    function updateSchedule() {
+      var now = Date.now(); // test with 1633636800500
+      $sessions.forEach(function ($session) {
+        var start = Date.parse($session.dataset.starts),
+          end = Date.parse($session.dataset.ends);
+        console.log(now, start, end);
+        if (now >= start && now <= end) {
+          $session.setAttribute('aria-current', 'time');
+        } else {
+          $session.removeAttribute('aria-current');
+        }
+      });
+    }
+    // Init
+    updateSchedule();
+    // Run every 5 minutes on the 5 minute mark
+    function everyFive() {
+      var date = new Date();
+      if (date.getMinutes() % 5 == 0) {
+        updateSchedule();
+      }
+    }
+    setInterval(everyFive, 60000);
+  })(this, this.document);
+</script>
