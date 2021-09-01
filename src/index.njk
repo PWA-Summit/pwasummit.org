@@ -54,7 +54,12 @@ layout: wrapper.njk
   <caption colspan="3" class="schedule--caption">
     <div class="schedule--caption-wrapper">
       <span class="schedule--title type--h1">Schedule</span>
-      <select class="schedule--timezone" name="timezone" id="timezone">
+      <select
+        class="schedule--timezone"
+        name="timezone"
+        id="timezone"
+        aria-label="Choose a timezone"
+      >
         <option value="local">Local</option>
         <option value="GMT">GMT</option>
         <option value="America/New_York">New York</option>
