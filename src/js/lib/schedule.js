@@ -55,15 +55,27 @@ export class Schedule {
   trackSchedule(now) {
     now = now || new Date().getTime();
     // Uncomment for testing:
-    now = 1633636800500;
+    // now = 1633636800500;
     for (const session of this.sessions) {
-      const start = Date.parse(session.dataset.starts);
-      const end = Date.parse(session.dataset.ends);
+      const start = this.enforceDate(session.dataset.starts);
+      const end = this.enforceDate(session.dataset.ends);
       if (now >= start && now <= end) {
         session.setAttribute('aria-current', 'time');
       } else {
         session.removeAttribute('aria-current');
       }
     }
+  }
+
+  /**
+   * Coerces the Dates to a consistent format
+   * @param {Date} date - The date to coerce
+   * @return {Number} timestamp
+   */
+  enforceDate(date) {
+    if (!(date instanceof Date)) {
+      date = new Date(date);
+    }
+    return date.getTime();
   }
 }
