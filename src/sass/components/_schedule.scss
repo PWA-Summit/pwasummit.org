@@ -18,6 +18,10 @@
     background-color: hsla(213, 57%, 34%, 0.15);
   }
 
+  [aria-current] {
+    background-color: hsla(58, 87%, 57%, 0.15);
+  }
+
   th,
   td {
     border: 0;
