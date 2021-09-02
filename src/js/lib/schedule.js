@@ -55,10 +55,10 @@ export class Schedule {
   trackSchedule(now) {
     now = now || new Date().getTime();
     // Uncomment for testing:
-    // now = 1633636800500;
+    // now = 1633655400500;
     for (const session of this.sessions) {
-      const start = this.enforceDate(session.dataset.starts);
-      const end = this.enforceDate(session.dataset.ends);
+      const start = this.getUTCTimeStamp(session.dataset.starts);
+      const end = this.getUTCTimeStamp(session.dataset.ends);
       if (now >= start && now <= end) {
         session.setAttribute('aria-current', 'time');
       } else {
@@ -72,10 +72,20 @@ export class Schedule {
    * @param {Date} date - The date to coerce
    * @return {Number} timestamp
    */
-  enforceDate(date) {
+  getUTCTimeStamp(date) {
     if (!(date instanceof Date)) {
       date = new Date(date);
     }
+
+    // convert to UTC
+    date = new Date(
+      date.getUTCFullYear(),
+      date.getUTCMonth(),
+      date.getUTCDate(),
+      date.getUTCHours(),
+      date.getUTCMinutes(),
+      date.getUTCSeconds(),
+    );
     return date.getTime();
   }
 }
