@@ -7,7 +7,7 @@ function formatDate(date, options = {}) {
     date = new Date(date);
   }
 
-  if (!('zimeZone' in options)) {
+  if (!('timeZone' in options)) {
     options.timeZone = 'UTC';
   }
 
