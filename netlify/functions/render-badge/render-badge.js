@@ -42,7 +42,7 @@ const handler = async (event) => {
       case 'Organizer ticket':
         ticketType = 'Organizer';
         break;
-      case 'Getting Started with Progressive Web Apps Workshop, October 6':
+      case 'Getting Started with Progressive Web Apps Workshop, October 5':
         ticketType = 'Trainee';
         break;
     }

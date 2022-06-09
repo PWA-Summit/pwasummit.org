@@ -16,7 +16,7 @@ async function handler(event, context) {
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>I'm attending PWA Summit, October 6-7</title>
+        <title>I'm attending PWA Summit, October 5-6</title>
         <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
         <meta property="og:title" content="Join me at free online PWA Summit, Oct 6 & 7" />
         <meta property="og:type" content="website" />
