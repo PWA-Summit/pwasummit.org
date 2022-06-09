@@ -23,8 +23,8 @@ module.exports = defineConfig({
         short_name: 'PWA Summit',
         description:
           'A free, online, single-track conference focused on helping everyone succeed with Progressive Web Apps.',
-        background_color: '#108484',
-        theme_color: '#108484',
+        background_color: '#0257b2',
+        theme_color: '#0257b2',
         display: 'minimal-ui',
         icons: [
           {

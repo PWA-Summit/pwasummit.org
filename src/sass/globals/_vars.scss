@@ -1,11 +1,6 @@
 @use 'sass:list';
 
-$stripes: (
-  (hsl(213, 57%, 34%) hsl(211, 58%, 34%)),
-  (hsl(209, 60%, 33%) hsl(204, 61%, 33%)),
-  (hsl(201, 63%, 32%) hsl(194, 68%, 31%)),
-  (hsl(191, 71%, 31%) hsl(180, 79%, 29%))
-);
+$stripes: ((#6b8b68 #759062), (#7a925e #8b9b52), (#96a04a #d7c11d), (#2a6b96 #0056b4));
 
 :root {
   @for $i from 1 through list.length($stripes) {

@@ -1,7 +1,7 @@
 {
-  "name": "2021.pwasummit.org",
+  "name": "pwasummit.org",
   "version": "1.0.0",
-  "description": "Website for the 2021 PWA Summit",
+  "description": "Website for the PWA Summit",
   "main": "index.js",
   "scripts": {
     "start": "run-s vite",
@@ -27,14 +27,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PWA-Summit/2021.pwasummit.org.git"
+    "url": "git+https://github.com/PWA-Summit/pwasummit.org.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PWA-Summit/2021.pwasummit.org/issues"
+    "url": "https://github.com/PWA-Summit/pwasummit.org/issues"
   },
-  "homepage": "https://github.com/PWA-Summit/2021.pwasummit.org#readme",
+  "homepage": "https://github.com/PWA-Summit/pwasummit.org#readme",
   "devDependencies": {
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-navigation": "^0.2.0",

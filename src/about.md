@@ -20,7 +20,7 @@ We know it’s a free event, so "selling" may seem out of place, but time is mon
 
 > `<manager-name>`,
 >
-> I’d like to attend PWA Summit on 7 October 2021. This conference is free to attend and will take place entirely online. Attending this event will enable me to
+> I’d like to attend PWA Summit on 6 October 2022. This conference is free to attend and will take place entirely online. Attending this event will enable me to
 >
 > - Improve my understanding of Progressive Web Apps (PWAs), making me a more valuable asset to our organization;
 > - Learn how other organizations are using PWAs to increase engagement with their customers;
@@ -43,18 +43,4 @@ Hopefully that helps. We hope to see you there!
 
 ## Who is organizing the PWA Summit?
 
-The PWA Summit is a collaboration between folks from a handful of different companies involved in the creation of PWA technologies: Google, Intel, Microsoft, and Samsung. Our steering committee is:
-
-- [Daniel Appelquist](https://twitter.com/torgo), Director of Web Advocacy at Samsung Internet
-- [Andre Bandarra](https://twitter.com/andreban), Developer Advocate at Google
-- [Diego González](https://twitter.com/diekus), Program Manager at Microsoft
-- [Aaron Gustafson](https://twitter.com/AaronGustafson), Principal Program Manager at Microsoft
-- [Adriana Jara](https://twitter.com/tropicadri), Developer Relations Engineer at Google
-- [Kathleen Khoo](https://twitter.com/KathleenKhoo), Events Programs Manager at Microsoft
-- [Pete LePage](https://twitter.com/petele), Developer Advocate at Google
-- [Penny McLachlan](https://twitter.com/b1tr0t), Product Manager at Google
-- [Laura Morinigo](https://twitter.com/thisislalaok), Web Developer Advocate at Samsung Internet
-- [Sam Richard](https://twitter.com/snugug), Developer Relations Engineer at Google
-- [Kenneth Rohde Christiansen](https://twitter.com/kennethrohde), Web Platform Architect at Intel
-- [David Rousset](https://twitter.com/davrous), Senior Program Manager at Microsoft
-- [Maxim Salnikov](https://twitter.com/webmaxru), Developer Engagement Lead at Microsoft
+The PWA Summit is a collaboration between folks from a handful of different companies involved in the creation of PWA technologies: Google, Intel, Microsoft, and Samsung Internet.

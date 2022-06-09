@@ -1,6 +1,6 @@
-# 2021.pwasummit.org
+# pwasummit.org
 
-Website for the 2021 PWA Summit
+Website for the PWA Summit
 
 ## Usage
 
