@@ -40,3 +40,28 @@
     height: 1.25em;
   }
 }
+
+.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.previous--events {
+  display: flex;
+  flex-wrap: nowrap;
+  width: auto;
+
+  dt {
+    font-weight: var(--weight-bold);
+    margin-right: 0.25em;
+
+    &::after {
+      content: ': ';
+    }
+  }
+
+  dd {
+    margin-right: 0.25em;
+  }
+}

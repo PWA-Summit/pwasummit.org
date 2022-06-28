@@ -152,11 +152,19 @@
 
     <footer class="banner--FOOTER">
       <div class="container">
-        <nav class="nav">
-          {{ collections.all | eleventyNavigation('Main') | eleventyNavigationToHtml | safe }}
-        </nav>
+        <div class="split">
+          <dl class="previous--events">
+            <dt>Previously</dt>
+            <dd>
+              <a href="https://2021.pwasummit.org/" title="PWA Summit 2021">2021</a>
+            </dd>
+          </dl>
+          <nav class="nav">
+            {{ collections.all | eleventyNavigation('Main') | eleventyNavigationToHtml | safe }}
+          </nav>
+        </div>
         <div class="footer">
-          <p><a href="https://twitter.com/PwaSummit" target="_blank">@PWASummit</a></p>
+          <p><a href="https://twitter.com/PwaSummit" target="_blank">@PWASummit</a><br /></p>
           <p class="footer--links">
             Organized by <a target="_blank" href="https://www.google.com/chrome/">Google</a>,
             <a target="_blank" href="https://www.microsoft.com/en-us/edge">Microsoft</a>,
