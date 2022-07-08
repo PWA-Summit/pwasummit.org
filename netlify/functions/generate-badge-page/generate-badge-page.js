@@ -18,16 +18,16 @@ async function handler(event, context) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>I'm attending PWA Summit, October 5-6</title>
         <link rel="icon" type="image/svg+xml" href="/assets/logo.svg" />
-        <meta property="og:title" content="Join me at free online PWA Summit, Oct 6 & 7" />
+        <meta property="og:title" content="Join me at free online PWA Summit, October 5-6" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pwasummit.org/" />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2021/${ticketId}.png"
+          content="https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2022/${ticketId}.png"
         />
         <meta
           property="og:description"
-          content="This is a digital badge confirming my participation in PWA Summit 2021 - a free, online, single-track conference focused on helping everyone succeed with Progressive Web Apps. Get your ticket here ->"
+          content="This is a digital badge confirming my participation in PWA Summit 2022 - a free, online, single-track conference focused on helping everyone succeed with Progressive Web Apps. Get your ticket here ->"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@pwasummit" />
@@ -35,7 +35,7 @@ async function handler(event, context) {
         <style>
           body {
             background-color: #108484;
-            background-image: url(https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2021/${ticketId}.png);
+            background-image: url(https://res.cloudinary.com/pwasummit/image/upload/pwasummit/2022/${ticketId}.png);
             background-position: center top;
             background-repeat: no-repeat;
             background-size: contain;
@@ -95,12 +95,12 @@ async function handler(event, context) {
       </head>
       <body>
         <div class="placeholder">
-          <div class="date">October 6 & 7, Online</div>
-          <tito-button event="pwasummit/2021"
+          <div class="date">October 5-6, Online</div>
+          <tito-button event="pwasummit/2022"
             >Get your free ticket</tito-button
           >
           <noscript>
-            <a class="tito-widget-button" href="https://ti.to/pwasummit/2021/preview">Get your free ticket</a>
+            <a class="tito-widget-button" href="https://ti.to/pwasummit/2022/preview">Get your free ticket</a>
           </noscript>
         </div>
       </body>

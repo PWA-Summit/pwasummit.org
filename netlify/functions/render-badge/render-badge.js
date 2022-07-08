@@ -48,7 +48,7 @@ const handler = async (event) => {
     }
 
     const eventName = 'pwasummit';
-    const eventYear = '2021';
+    const eventYear = '2022';
     const baseImagePath = 'netlify/functions/render-badge/assets/badge-bg.png';
 
     if (!process.env.NETLIFY) require('dotenv').config();
