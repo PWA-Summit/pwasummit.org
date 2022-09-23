@@ -12,7 +12,7 @@ The PWA Summit’s mission is to help you be successful with Progressive Web App
 
 The PWA Summit’s organizers are a group of industry experts that believe in the promise of PWAs as a way to make the web more engaging and powerful. We all happen to work for companies that have the same vision for PWAs, but we don’t think we—or our companies—should be the only ones people hear from on the subject, so we’re organizing this event to enable folks from across the globe to share their PWA knowledge, failures, and insights with you (and us).
 
-If you’re only slightly familiar with PWAs, we’re also offering a free half-day workshop the day before the event that will help you get your bearings when it comes to Web App Manifests, Service Workers, the Cache API, and more. Over the course of the workshop, you’ll be writing the code that will take your own web project from zero to PWA.
+If you’re only slightly familiar with PWAs, we’re also offering free half-day workshops that will help you get your bearings when it comes to Web App Manifests, Service Workers, the Cache API, and more. Over the course of the workshop, you’ll be writing the code that will take your own web project from zero to PWA.
 
 ## How can I sell my boss on letting me attend the PWA Summit?
 
@@ -37,7 +37,7 @@ We know it’s a free event, so "selling" may seem out of place, but time is mon
 
 If you’re interested in attending the workshop too, you might consider including something like this:
 
-> As we are not currently working with Progressive Web Apps, I’d also like to attend the free half-day workshop on October 6th. In the workshop, I’ll get up to speed with the basics of building a PWA and get hands-on experience turning an existing web project into one. This is a great opportunity to see what `<insert-the-name-of-a-project-you-work-on>` would be like as a PWA (and to jumpstart its development).
+> As we are not currently working with Progressive Web Apps, I’d also like to attend the free half-day workshop. In the workshop, I’ll get up to speed with the basics of building a PWA and get hands-on experience turning an existing web project into one. This is a great opportunity to see what `<insert-the-name-of-a-project-you-work-on>` would be like as a PWA (and to jumpstart its development).
 
 Hopefully that helps. We hope to see you there!
 
