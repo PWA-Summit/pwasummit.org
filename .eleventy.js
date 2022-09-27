@@ -1,6 +1,7 @@
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const markdown = require('./lib/markdown');
 const slugify = require('slugify');
+const svgContents = require('eleventy-plugin-svg-contents');
 
 function formatDate(date, options = {}) {
   if (!(date instanceof Date)) {
@@ -67,6 +68,8 @@ module.exports = function (eleventy) {
   );
 
   eleventy.addShortcode('timezone', () => `<span data-timezone="UTC">UTC</span>`);
+
+  eleventy.addPlugin(svgContents);
 
   return {
     dir: {
