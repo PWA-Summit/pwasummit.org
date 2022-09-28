@@ -27,6 +27,9 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: calc(80ch + 2rem);
+  max-width: 1237px;
   padding: 0 1rem;
+  @media (min-width: 1000px) {
+    padding: 0 285px 0 0;
+  }
 }

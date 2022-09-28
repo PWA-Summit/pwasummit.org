@@ -37,11 +37,26 @@
   </head>
   <body>
     <header class="banner">
-      <a class="banner--title" href="/" id="logo" aria-label="PWA Summit">
-        {{ "/src/public/images/logo.svg" | svgContents | safe }}
-      </a>
-
-      <div class="banner--mountains" aria-hidden="true"></div>
+      <div class="container">
+        <a class="banner--title" href="/" id="logo" aria-label="PWA Summit">
+          {{ "/src/public/images/logo.svg" | svgContents | safe }}
+        </a>
+        <nav class="nav">
+          {% set navPages = collections.all | eleventyNavigation('Main') %}
+          <ul>
+            {%- for entry in navPages %}
+            <li>
+              {%- set current %} {% if entry.url == page.url %} aria-current="page"{% endif %} {%-
+              endset %}
+              <a href="{{ entry.url }}" {{ current }}>{{ entry.title }}</a>
+            </li>
+            {%- endfor %}
+            <li class="nav-item__twitter">
+              <a href="https://twitter.com/PwaSummit" target="_blank">@PWASummit</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -57,12 +72,8 @@
               <a href="https://2021.pwasummit.org/" title="PWA Summit 2021">2021</a>
             </dd>
           </dl>
-          <nav class="nav">
-            {{ collections.all | eleventyNavigation('Main') | eleventyNavigationToHtml | safe }}
-          </nav>
         </div>
         <div class="footer">
-          <p><a href="https://twitter.com/PwaSummit" target="_blank">@PWASummit</a><br /></p>
           <p class="footer--links">
             Organized by <a target="_blank" href="https://www.google.com/chrome/">Google</a>,
             <a target="_blank" href="https://www.microsoft.com/en-us/edge">Microsoft</a>,
