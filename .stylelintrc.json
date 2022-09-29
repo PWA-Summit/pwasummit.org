@@ -13,6 +13,8 @@
         "ignoreAtRules": ["each", "media", "supports", "include", "for"]
       }
     ],
+    "selector-max-id": 1,
+    "selector-max-compound-selectors": 6,
     "scss/at-function-pattern": "^[a-z]+([a-zA-Z0-9-]+[a-zA-Z0-9]+)?$"
   }
 }
