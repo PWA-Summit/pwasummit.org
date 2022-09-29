@@ -1,3 +1,7 @@
+html {
+  min-width: 300px;
+}
+
 body {
   --banner-m: 1.5;
   //background: var(--stripe-4-2);
@@ -9,6 +13,7 @@ body {
   font-weight: var(--weight-normal);
   margin: 0;
   min-height: 100vh;
+
   @media (min-width: 513px) {
     --banner-m: 2;
   }
