@@ -8,13 +8,13 @@
     margin-top: 1.618rem;
   }
 
+  section + section {
+    margin-top: 5rem;
+  }
+
   // But no owl spacing for first item
   :first-child > :first-child {
     margin-top: 0;
-  }
-
-  section > :not(h1, h2, h3, h4, h5, h6, ul, li)::first-letter {
-    margin-left: 1.618rem;
   }
 
   h1,
@@ -104,4 +104,8 @@ blockquote {
   background-color: rgba(0, 0, 0, 0.1);
   border: 4px solid rgba(255, 255, 255, 0.2);
   padding: 1em 2em;
+}
+
+code {
+  font-size: 1.25em;
 }
