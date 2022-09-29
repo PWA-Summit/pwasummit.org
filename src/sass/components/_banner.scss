@@ -142,11 +142,31 @@
   }
 
   &--FOOTER {
-    background-color: var(--white);
-    background-position: right top;
-    background-repeat: no-repeat;
-    color: var(--black);
-    padding-bottom: bm(pxRem(15.2568px));
+    background-color: var(--blue);
+    border-bottom: 13px solid var(--gold);
+    color: var(--white);
+    margin-top: 5rem;
+    padding: 2rem 0;
     position: relative;
+
+    .container {
+      padding-right: 1rem;
+    }
+
+    a:link,
+    a:visited {
+      color: inherit;
+      font-weight: 500;
+    }
+
+    .nav ul {
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+
+      @media (min-width: 1000px) {
+        gap: 5rem;
+      }
+    }
   }
 }

@@ -65,7 +65,25 @@
 
     <footer class="banner--FOOTER">
       <div class="container">
-        <div class="split">
+        <nav class="nav">
+          {% set navPages = collections.all | eleventyNavigation('Main') %}
+          <ul>
+            {%- for entry in navPages %}
+            <li>
+              {%- set current %} {% if entry.url == page.url %} aria-current="page"{% endif %} {%-
+              endset %}
+              <a href="{{ entry.url }}" {{ current }}><b>{{ entry.title }}</b></a>
+            </li>
+            {%- endfor %}
+            <li>
+              {%- set current %} {% if entry.url == "/code-of-conduct/" %} aria-current="page"{%
+              endif %} {%- endset %}
+              <a href="/code-of-conduct/" {{ current }}><b>Code of Conduct</b></a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--div class="split">
           <dl class="previous--events">
             <dt>Previously</dt>
             <dd>
@@ -88,7 +106,7 @@
               ><img src="/images/netlify.svg" class="footer--logo" alt="Netlify"
             /></a>
           </p>
-        </div>
+        </div-->
       </div>
     </footer>
     {% include "icons.njk" %}
