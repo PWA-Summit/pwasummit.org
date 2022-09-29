@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/sass/style.scss" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;500&family=Work+Sans:ital,wght@0,300;0,500;1,300;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;500&family=Open+Sans:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap"
       rel="stylesheet"
     />
     <meta property="og:title" content="{{t}}" />
@@ -48,20 +48,20 @@
             <li>
               {%- set current %} {% if entry.url == page.url %} aria-current="page"{% endif %} {%-
               endset %}
-              <a href="{{ entry.url }}" {{ current }}>{{ entry.title }}</a>
+              <a href="{{ entry.url }}" {{ current }}><b>{{ entry.title }}</b></a>
             </li>
             {%- endfor %}
             <li class="nav-item__twitter">
-              <a href="https://twitter.com/PwaSummit" target="_blank">@PWASummit</a>
+              <a href="https://twitter.com/PwaSummit" target="_blank">
+                {{ "/src/public/images/twitter-circle.svg" | svgContents | safe }} @PWASummit</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <div class="container">{{ content | safe }}</div>
-    </main>
+    <main>{{ content | safe }}</main>
 
     <footer class="banner--FOOTER">
       <div class="container">

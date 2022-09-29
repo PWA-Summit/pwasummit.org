@@ -1,6 +1,7 @@
 .banner {
-  background: var(--white) url('/images/hoverla.svg') center 110px no-repeat;
-  border-bottom: 10px solid var(--gold);
+  background: var(--white) url('/images/hoverla.svg') center 130px no-repeat;
+  background-size: 1162px 250px;
+  border-bottom: 13px solid var(--gold);
   display: flex;
   height: 332px;
   position: relative;
@@ -19,7 +20,7 @@
     }
 
     @media (min-width: 1000px) {
-      left: 0;
+      left: 1rem;
       position: absolute;
       top: 85px;
     }
@@ -29,6 +30,99 @@
       filter: drop-shadow(0 0 40px #fff);
       height: auto;
       width: 100%;
+    }
+  }
+
+  .nav {
+    background-color: var(--white);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    a::before {
+      background-color: var(--gold);
+      bottom: 1px;
+      content: ' ';
+      display: block;
+      height: 3px;
+      position: absolute;
+      transition: width 0.25s ease-out;
+      width: 0;
+      z-index: 0;
+    }
+
+    a:link,
+    a:visited {
+      color: var(--blue);
+      font-weight: bold;
+      position: relative;
+
+      b {
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    a:hover::before,
+    a:focus::before {
+      width: 100%;
+    }
+
+    ul {
+      border-top: 13px solid var(--gold);
+      gap: 2rem;
+      justify-content: center;
+      padding: 0.5rem 0;
+    }
+
+    .nav-item__twitter svg {
+      display: none;
+    }
+
+    @media (min-width: 1000px) {
+      background-color: transparent;
+      bottom: auto;
+      left: auto;
+      right: 1rem;
+      top: 77px;
+
+      ul {
+        border-top-width: 0;
+        gap: 3rem;
+        justify-content: flex-end;
+        padding: 0;
+      }
+
+      .nav-item__twitter {
+        font-weight: normal;
+        position: absolute;
+        top: 100px;
+
+        a {
+          display: flex;
+          font-size: 22px;
+          gap: 0.5rem;
+
+          &::before {
+            display: none;
+          }
+        }
+
+        svg {
+          display: inline-block;
+          height: 37px;
+          width: 37px;
+        }
+
+        #twitter-circle {
+          fill: var(--gold);
+        }
+
+        #twitter-bird {
+          fill: var(--white);
+        }
+      }
     }
   }
 

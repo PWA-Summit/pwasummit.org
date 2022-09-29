@@ -1,8 +1,27 @@
 ._markdown {
-  padding: 2rem 0;
+  &--header {
+    align-items: center;
+    background: var(--blue);
+    color: var(--white);
+    display: flex;
+    height: 297px;
 
-  &--header h1 {
-    margin-top: 0;
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .header-anchor {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &--body {

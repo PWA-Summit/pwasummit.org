@@ -1,10 +1,10 @@
 body {
   --banner-m: 1.5;
-  background: var(--stripe-4-2);
-  color: var(--white);
+  //background: var(--stripe-4-2);
+  color: var(--black);
   display: flex;
   flex-direction: column;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 125%;
   font-weight: var(--weight-normal);
   margin: 0;
@@ -21,8 +21,13 @@ body {
 }
 
 main {
-  color: var(--white);
+  color: var(--black);
   flex: 1;
+
+  a:link,
+  a:visited {
+    color: inherit;
+  }
 }
 
 .container {
@@ -30,6 +35,6 @@ main {
   max-width: 1237px;
   padding: 0 1rem;
   @media (min-width: 1000px) {
-    padding: 0 285px 0 0;
+    padding: 0 285px 0 1rem;
   }
 }
