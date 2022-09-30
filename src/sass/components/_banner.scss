@@ -55,7 +55,7 @@
     a:link,
     a:visited {
       color: var(--blue);
-      font-weight: bold;
+      font-weight: var(--weight-bold);
       position: relative;
 
       b {
@@ -95,32 +95,22 @@
       }
 
       .nav-item__twitter {
-        font-weight: normal;
         position: absolute;
         top: 100px;
+
+        svg {
+          display: inline-block;
+        }
 
         a {
           display: flex;
           font-size: 22px;
+          font-weight: var(--weight-normal);
           gap: 0.5rem;
 
           &::before {
             display: none;
           }
-        }
-
-        svg {
-          display: inline-block;
-          height: 37px;
-          width: 37px;
-        }
-
-        #twitter-circle {
-          fill: var(--gold);
-        }
-
-        #twitter-bird {
-          fill: var(--white);
         }
       }
     }
@@ -156,7 +146,7 @@
     a:link,
     a:visited {
       color: inherit;
-      font-weight: 500;
+      font-weight: var(--weight-bold);
     }
 
     .nav ul {
@@ -164,9 +154,130 @@
       gap: 3rem;
       justify-content: center;
 
+      + ul {
+        margin-top: 1rem;
+      }
+
       @media (min-width: 1000px) {
         gap: 5rem;
       }
     }
+
+    .nav-item__previously {
+      font-size: pxRem(22px);
+    }
+
+    .nav-item__twitter a {
+      font-weight: var(--weight-normal);
+    }
+
+    .twitter-icon {
+      height: 33px;
+      width: 33px;
+
+      &__circle {
+        fill: var(--white);
+      }
+
+      &__bird {
+        fill: var(--blue);
+      }
+    }
   }
+
+  &--sponsors {
+    padding: 5rem 0;
+
+    @media (min-width: 1000px) {
+      background: var(--white) url('/images/hoverla.svg') -230px 230px no-repeat;
+      height: 457px;
+    }
+
+    .container {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.nav-item__twitter {
+  font-weight: normal;
+
+  a {
+    display: flex;
+    font-size: 22px;
+    gap: 0.5rem;
+  }
+}
+
+.twitter-icon {
+  display: inline-block;
+  height: 37px;
+  width: 37px;
+
+  &__circle {
+    fill: var(--gold);
+  }
+
+  &__bird {
+    fill: var(--white);
+  }
+}
+
+.footer--links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
+  justify-content: center;
+
+  @media (min-width: 1000px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  span {
+    white-space: nowrap;
+
+    @media (max-width: 1000px) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  svg {
+    display: inline-block;
+  }
+}
+
+.footer--sponsors {
+  margin-top: 5rem;
+
+  @media (min-width: 1000px) {
+    justify-content: flex-end;
+  }
+}
+
+.sponsor--google {
+  height: 62px;
+  width: 193px;
+}
+
+.sponsor--microsoft {
+  height: 60px;
+  width: 284px;
+}
+
+.sponsor--samsung {
+  height: 72px;
+  width: 214px;
+}
+
+.sponsor--intel {
+  height: 55px;
+  width: 143px;
+}
+
+.sponsor--netlify {
+  height: 66px;
+  width: 206px;
 }

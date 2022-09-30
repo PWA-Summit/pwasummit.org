@@ -81,32 +81,43 @@
               <a href="/code-of-conduct/" {{ current }}><b>Code of Conduct</b></a>
             </li>
           </ul>
-        </nav>
-
-        <!--div class="split">
-          <dl class="previous--events">
-            <dt>Previously</dt>
-            <dd>
+          <ul>
+            <li class="nav-item__twitter">
+              <a href="https://twitter.com/PwaSummit" target="_blank">
+                {{ "/src/public/images/twitter-circle.svg" | svgContents | safe }} @PWASummit
+              </a>
+            </li>
+            <li class="nav-item__previously">
+              Previous Summits:
               <a href="https://2021.pwasummit.org/" title="PWA Summit 2021">2021</a>
-            </dd>
-          </dl>
-        </div>
-        <div class="footer">
-          <p class="footer--links">
-            Organized by <a target="_blank" href="https://www.google.com/chrome/">Google</a>,
-            <a target="_blank" href="https://www.microsoft.com/en-us/edge">Microsoft</a>,
-            <a target="_blank" href="https://developer.samsung.com/internet">Samsung Internet</a>,
-            <a target="_blank" href="https://01.org/chromium">Intel</a>
-          </p>
-        </div>
-        <div class="footer footer--SPONSORS">
-          <p class="footer--links footer--sponsors">
-            <span>Hosting sponsored by </span
-            ><a target="_blank" href="https://www.netlify.com/"
-              ><img src="/images/netlify.svg" class="footer--logo" alt="Netlify"
-            /></a>
-          </p>
-        </div-->
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <footer class="banner--sponsors">
+      <div class="container">
+        <p class="footer--links">
+          <span>Organized by</span>
+          <a target="_blank" href="https://www.google.com/chrome/" class="sponsor--google">
+            {{ "/src/public/images/google.svg" | svgContents | safe }}
+          </a>
+          <a target="_blank" href="https://www.microsoft.com/en-us/edge" class="sponsor--microsoft">
+            {{ "/src/public/images/microsoft.svg" | svgContents | safe }}
+          </a>
+          <a target="_blank" href="https://developer.samsung.com/internet" class="sponsor--samsung">
+            {{ "/src/public/images/samsung.svg" | svgContents | safe }}
+          </a>
+          <a target="_blank" href="https://01.org/chromium" class="sponsor--intel">
+            {{ "/src/public/images/intel.svg" | svgContents | safe }}
+          </a>
+        </p>
+        <p class="footer--links footer--sponsors">
+          <span>Hosting sponsored by</span>
+          <a target="_blank" href="https://www.netlify.com/" class="sponsor--netlify">
+            {{ "/src/public/images/netlify.svg" | svgContents | safe }}
+          </a>
+        </p>
       </div>
     </footer>
     {% include "icons.njk" %}

@@ -43,7 +43,7 @@
         text-decoration: underline;
       }
 
-      @media (min-width: 1000px) {
+      @media (min-width: 1300px) {
         &:hover::before,
         &:focus::before {
           content: '#';
