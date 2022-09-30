@@ -13,20 +13,40 @@
     display: grid;
     grid-column: 2 / span 5;
     grid-template-columns: 1fr auto;
+
+    select {
+      grid-row: 2;
+      grid-column: 2/span 5;
+    }
+
+    @media (min-width: 1000px) {
+      h1 {
+        grid-column: 2/span 2;
+      }
+      select {
+        grid-column: 5/span 2;
+      }
+    }
   }
 
   h2 {
+    color: var(--blue);
     grid-column: 2 / span 5;
   }
 
+  ol.sessions {
+    margin: 0;
+    padding: 0;
+  }
+
   &--start {
+    margin: 0;
     padding-bottom: 1.5rem;
   }
 
   &--session {
     align-items: start;
     display: grid;
-    gap: 4rem;
   }
 
   &--title {
@@ -69,10 +89,11 @@
 
   &--name {
     text-align: center;
+    margin-top: 0;
   }
 
   &--desc {
-    text-align: justify;
+    margin: 0;
 
     @media (max-width: 730px) {
       flex-direction: column;

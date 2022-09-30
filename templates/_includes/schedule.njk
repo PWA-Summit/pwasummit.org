@@ -44,9 +44,7 @@
       </td>
       {% if session.isServiceSession == false %}
       <td>
-        <a
-          class="schedule--link"
-          href="/sessions/{{ (session.title + session.speakers[0].name) | slugify }}"
+        <a class="schedule--link" href="/sessions/{{session.title | slugify }}"
           >{{session.title}}</a
         >
       </td>

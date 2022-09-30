@@ -10,7 +10,11 @@
     display: grid;
     grid-column: 1 / span 7;
     grid-template-columns: inherit;
-    height: 297px;
+    padding: 2rem 0;
+    
+    @media (min-width: 1000px) {
+      height: 297px;
+    }
 
     h1 {
       grid-column: 2 / span 5;

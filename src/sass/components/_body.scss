@@ -44,8 +44,11 @@ main {
   max-width: 1237px;
   padding: 0 1rem;
 
+  @media (min-width: 1000px) {
+    padding: 0 285px 0 1rem;
+  }
+
   &--schedule {
-    grid-column: 2 / span 5;
     padding-right: 1rem;
   }
 }
