@@ -1,8 +1,7 @@
 ._session {
   display: grid;
-  grid-row-gap: 2rem;
-  margin: auto;
-  max-width: calc(100vw - 15rem);
+  grid-column: 2 / span 5;
+  grid-row-gap: 5rem;
 
   .sessions--start {
     margin: 1rem 0 0.5rem;
@@ -24,6 +23,12 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  &--speaker {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto 1fr;
   }
 
   &--name {

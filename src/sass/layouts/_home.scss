@@ -1,6 +1,7 @@
 ._home {
   background-color: var(--blue);
   color: var(--white);
+  grid-column: 1 / span 7;
   margin: 0 auto 5rem;
   padding: 3rem 0;
   width: 100%;

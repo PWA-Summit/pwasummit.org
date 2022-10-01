@@ -1,4 +1,6 @@
 ._markdown {
+  grid-column: 1 / span 7;
+
   &--header {
     align-items: center;
     background: var(--blue);
@@ -25,6 +27,7 @@
   }
 
   &--body {
+    grid-column: 2 / span 5;
     margin-top: 5rem;
   }
 }

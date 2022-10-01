@@ -28,13 +28,15 @@ eleventyComputed:
     {% for speaker in session | speakers(sessionize.speakers) %}
     <li class="_session--speaker">
       <img class="_session--picture" src="{{speaker.profilePicture}}" alt="" />
-      <p class="_session--name type--h4">{{speaker.fullName}}</p>
-      <p class="_session--tag">{{speaker.tagLine}}</p>
-      <div class="_session--speaker-links">{{ speakerLinks(speaker) }}</div>
+      <div>
+        <p class="_session--name type--h4">{{speaker.fullName}}</p>
+        <p class="_session--tag">{{speaker.tagLine}}</p>
+        <div class="_session--speaker-links">{{ speakerLinks(speaker) }}</div>
 
-      {% if speaker.tagLine != speaker.bio %}
-      <div class="_session--bio type">{{speaker.bio | md | safe }}</div>
-      {% endif %}
+        {% if speaker.tagLine != speaker.bio %}
+        <div class="_session--bio type">{{speaker.bio | md | safe }}</div>
+        {% endif %}
+      </div>
     </li>
     {% endfor %}
   </ul>

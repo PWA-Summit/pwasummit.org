@@ -20,7 +20,7 @@ We know it’s a free event, so "selling" may seem out of place, but time is mon
 
 > `<manager-name>`,
 >
-> I’d like to attend PWA Summit on 6 October 2022. This conference is free to attend and will take place entirely online. Attending this event will enable me to
+> I’d like to attend PWA Summit on October 5th 2022. This conference is free to attend and will take place entirely online. Attending this event will enable me to
 >
 > - Improve my understanding of Progressive Web Apps (PWAs), making me a more valuable asset to our organization;
 > - Learn how other organizations are using PWAs to increase engagement with their customers;
