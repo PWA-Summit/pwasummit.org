@@ -14,12 +14,16 @@
     border: 0;
   }
 
+  [data-even='false'] {
+    background-color: #eef2f5;
+  }
+
   [data-even='true'] {
-    background-color: hsla(213, 57%, 34%, 0.15);
+    background-color: #f6f9fc;
   }
 
   [aria-current] {
-    background-color: hsla(58, 87%, 57%, 0.15);
+    background-color: var(--gold);
   }
 
   th,
@@ -67,13 +71,20 @@
     color: var(--black);
   }
 
+  thead {
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
   &--time {
     font-size: 1rem;
   }
 
   &--day {
-    background-color: hsla(180, 79%, 5%, 0.15);
-    font-weight: var(--weight-bold);
+    background-color: var(--white);
+    color: var(--blue);
+    font-weight: var(--weight-normal);
   }
 
   &--title {
@@ -92,11 +103,12 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    font-size: pxRem(16px);
+    font-style: italic;
     justify-content: center;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 1rem 0 0;
     width: calc(150px + 1rem);
   }
 

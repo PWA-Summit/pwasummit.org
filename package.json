@@ -76,9 +76,9 @@
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0",
     "uslug": "^1.0.4",
-    "vite": "^2.3.3",
+    "vite": "^3.1.4",
     "vite-plugin-eleventy": "^0.0.9",
-    "vite-plugin-pwa": "^0.7.3"
+    "vite-plugin-pwa": "^0.13.1"
   },
   "dependencies": {
     "cloudinary": "^1.26.2",

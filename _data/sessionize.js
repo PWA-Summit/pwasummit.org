@@ -3,14 +3,21 @@ const cache = require('@11ty/eleventy-cache-assets');
 // Get Sessionize data for use throughout the site
 module.exports = async function () {
   // Speaker data
-  const { speakers, sessions } = await cache('https://sessionize.com/api/v2/8y9131l1/view/All', {
+  const speakers = await cache('https://sessionize.com/api/v2/enu18kuh/view/Speakers', {
     duration: '1d',
     type: 'json',
   });
 
+  const sessions = await cache('https://sessionize.com/api/v2/enu18kuh/view/Sessions', {
+    duration: '1d',
+    type: 'json',
+  });
+
+  console.log(sessions[0].groupName);
+
   // Event schedule
   const schedule = (
-    await cache('https://sessionize.com/api/v2/8y9131l1/view/GridSmart', {
+    await cache('https://sessionize.com/api/v2/enu18kuh/view/GridSmart', {
       duration: '1d',
       type: 'json',
     })
@@ -26,6 +33,6 @@ module.exports = async function () {
     speakers,
     schedule,
     // Filter out breaks and Q&A
-    sessions: sessions.filter((s) => !exclude.includes(s.title.toLowerCase())),
+    sessions: sessions[0].sessions.filter((s) => !exclude.includes(s.title.toLowerCase())),
   };
 };
