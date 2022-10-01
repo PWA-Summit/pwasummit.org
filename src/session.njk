@@ -27,8 +27,8 @@ eleventyComputed:
   <ul class="_session--speakers">
     {% for speaker in session | speakers(sessionize.speakers) %}
     <li class="_session--speaker">
-      <p class="_session--name type--h4">{{speaker.fullName}}</p>
       <img class="_session--picture" src="{{speaker.profilePicture}}" alt="" />
+      <p class="_session--name type--h4">{{speaker.fullName}}</p>
       <p class="_session--tag">{{speaker.tagLine}}</p>
       <div class="_session--speaker-links">{{ speakerLinks(speaker) }}</div>
 
