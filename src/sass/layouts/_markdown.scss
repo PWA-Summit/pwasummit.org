@@ -1,20 +1,20 @@
 ._markdown {
+  display: grid;
   grid-column: 1 / span 7;
+  grid-template-columns: repeat(7, 1fr);
 
   &--header {
     align-items: center;
     background: var(--blue);
     color: var(--white);
     display: flex;
+    grid-column: 1 / span 7;
     height: 297px;
+    padding-left: 3rem;
 
     h1 {
       margin-top: 0;
     }
-  }
-
-  .container {
-    width: 100%;
   }
 
   .header-anchor {

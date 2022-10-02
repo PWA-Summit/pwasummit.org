@@ -4,11 +4,7 @@ layout: wrapper.njk
 
 <article class="_markdown">
   <header class="_markdown--header">
-    <div class="container">
-      <h1 class="type--h1">{{title}}</h1>
-    </div>
+    <h1 class="type--h1">{{title}}</h1>
   </header>
-  <div class="type _markdown--body">
-    <div class="container">{{ content | safe }}</div>
-  </div>
+  <div class="type _markdown--body">{{ content | safe }}</div>
 </article>
