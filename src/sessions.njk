@@ -12,8 +12,15 @@ eleventyNavigation:
   <select name="timezone" id="timezone">
     <option value="local">Local</option>
     <option value="GMT">GMT</option>
-    <option value="America/New_York">New York</option>
+    <option value="Africa/Lagos">Lagos</option>
     <option value="America/Los_Angeles">Los Angeles</option>
+    <option value="Africa/Nairobi">Nairobi</option>
+    <option value="America/New_York">New York</option>
+    <option value="America/Mexico_City">Mexico City</option>
+    <option value="America/Santiago">Santiago</option>
+    <option value="Asia/Shanghai">Shanghai</option>
+    <option value="Australia/Sydney">Sydney</option>
+    <option value="Asia/Tokyo">Tokyo</option>
   </select>
 </div>
 
@@ -26,7 +33,7 @@ eleventyNavigation:
   <ol class="sessions">
     {% for session in day.rooms[0].sessions %} {% if session.isServiceSession == false %}
     <li class="sessions--session">
-      <div class="sessions--session--info">
+      <div class="sessions--info">
         <h3 class="sessions--title type--h3">
           <a href="/sessions/{{ (session.title + session.speakers[0].name) | slugify }}"
             >{{session.title}}</a
@@ -36,8 +43,9 @@ eleventyNavigation:
           {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time
           session.endsAt, {hour: "numeric", minute: 'numeric'} %}
         </p>
-        <div class="sessions--desc type">{{session.description | md | safe }}</div>
       </div>
+      <div class="sessions--desc type">{{session.description | md | safe }}</div>
+
       <ul class="sessions--speakers">
         {% for speaker in session | speakers(sessionize.speakers) %}
         <li class="sessions--speaker">

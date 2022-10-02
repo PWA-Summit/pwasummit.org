@@ -24,13 +24,9 @@
   }
 
   &--session {
+    align-items: start;
     display: grid;
     gap: 4rem;
-
-    &--info {
-      display: grid;
-      gap: 0.5rem;
-    }
   }
 
   &--title {
@@ -38,7 +34,7 @@
   }
 
   &--info {
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
   }
 
   &--speakers {
@@ -51,9 +47,9 @@
     margin: 0;
     padding: 0;
 
-    @media (min-width: 615px) {
+    @media (max-width: 730px) {
       flex-direction: column;
-      grid-column: 2 / span 1;
+      grid-column: 1 / span 2;
       justify-content: unset;
     }
   }
@@ -77,5 +73,10 @@
 
   &--desc {
     text-align: justify;
+
+    @media (max-width: 730px) {
+      flex-direction: column;
+      grid-column: 2 / span 1;
+    }
   }
 }
