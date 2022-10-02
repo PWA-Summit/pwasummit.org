@@ -19,9 +19,18 @@
     grid-column: 2 / span 5;
   }
 
+  &--start {
+    padding-bottom: 1.5rem;
+  }
+
   &--session {
     display: grid;
-    gap: 5 rem;
+    gap: 4rem;
+
+    &--info {
+      display: grid;
+      gap: 0.5rem;
+    }
   }
 
   &--title {
@@ -64,5 +73,9 @@
 
   &--name {
     text-align: center;
+  }
+
+  &--desc {
+    text-align: justify;
   }
 }

@@ -4,7 +4,8 @@
   grid-row-gap: 5rem;
 
   .sessions--start {
-    margin: 1rem 0 0.5rem;
+    font-size: 1.75rem;
+    margin: 1rem 0;
   }
 
   &--info {
@@ -41,6 +42,10 @@
     margin-top: 0.5rem;
   }
 
+  &--bio {
+    text-align: justify;
+  }
+
   &--tag {
     font-style: italic;
   }
@@ -55,5 +60,9 @@
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
     max-width: 150px;
+  }
+
+  &--desc {
+    text-align: justify;
   }
 }

@@ -12,9 +12,6 @@ module.exports = async function () {
     duration: '1d',
     type: 'json',
   });
-
-  console.log(sessions[0].groupName);
-
   // Event schedule
   const schedule = (
     await cache('https://sessionize.com/api/v2/enu18kuh/view/GridSmart', {

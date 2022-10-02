@@ -26,7 +26,7 @@ eleventyNavigation:
   <ol class="sessions">
     {% for session in day.rooms[0].sessions %} {% if session.isServiceSession == false %}
     <li class="sessions--session">
-      <div class="session--info">
+      <div class="sessions--session--info">
         <h3 class="sessions--title type--h3">
           <a href="/sessions/{{ (session.title + session.speakers[0].name) | slugify }}"
             >{{session.title}}</a
