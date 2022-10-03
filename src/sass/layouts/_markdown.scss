@@ -7,12 +7,13 @@
     align-items: center;
     background: var(--blue);
     color: var(--white);
-    display: flex;
+    display: grid;
     grid-column: 1 / span 7;
+    grid-template-columns: inherit;
     height: 297px;
-    padding-left: 3rem;
 
     h1 {
+      grid-column: 2 / span 5;
       margin-top: 0;
     }
   }
