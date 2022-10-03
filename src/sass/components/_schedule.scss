@@ -5,11 +5,15 @@
   border-radius: 0 0 5px 5px;
   color: var(--black);
   // margin-top: -5vh;
-  margin: auto;
-  max-width: calc(100vw - 15rem);
+  margin: 2rem auto 0;
+  //max-width: calc(100vw - 15rem);
   overflow-x: hidden;
   width: 100%;
   // table-layout: fixed;
+
+  @media (min-width: 1000px) {
+    margin-top: 5rem;
+  }
 
   tr {
     border: 0;
@@ -59,7 +63,6 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      padding: 1rem;
       // justify-content: center;
 
       @media (min-width: 605px) {
@@ -76,6 +79,7 @@
     display: block;
     height: 0;
     overflow: hidden;
+    width: 0;
   }
 
   &--time {

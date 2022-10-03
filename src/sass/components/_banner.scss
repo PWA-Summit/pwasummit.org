@@ -2,13 +2,18 @@
   background: var(--white) url('/images/hoverla.svg') center 130px no-repeat;
   background-size: 1162px 250px;
   border-bottom: 13px solid var(--gold);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr min-content;
   height: 332px;
   position: relative;
 
   .container {
-    position: relative;
-    width: 100%;
+    display: grid;
+    grid-column: 1 / span 7;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr min-content;
+    padding: 1rem 0 0;
   }
 
   &--title {
@@ -16,13 +21,18 @@
     width: 252px;
 
     @media (max-width: 1000px) {
-      margin: 1rem auto;
+      grid-column: 4;
+      justify-self: center;
     }
 
     @media (min-width: 1000px) {
-      left: 1rem;
-      position: absolute;
-      top: 85px;
+      grid-column: 2 / span 2;
+      justify-self: start;
+      margin-top: 38px;
+
+      .container {
+        grid-template-rows: 1fr;
+      }
     }
 
     svg {
@@ -35,10 +45,7 @@
 
   .nav {
     background-color: var(--white);
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
+    grid-column: 1 / span 7;
 
     a::before {
       background-color: var(--gold);
@@ -81,11 +88,12 @@
     }
 
     @media (min-width: 1000px) {
+      align-self: start;
       background-color: transparent;
-      bottom: auto;
-      left: auto;
-      right: 1rem;
-      top: 77px;
+      grid-column: 4 / span 3;
+      justify-self: end;
+      margin-top: 30px;
+      position: relative;
 
       ul {
         border-top-width: 0;
@@ -135,12 +143,14 @@
     background-color: var(--blue);
     border-bottom: 13px solid var(--gold);
     color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     margin-top: 5rem;
     padding: 2rem 0;
     position: relative;
 
     .container {
-      padding-right: 1rem;
+      grid-column: 2 / span 5;
     }
 
     a:link,
@@ -151,7 +161,7 @@
 
     .nav ul {
       display: flex;
-      gap: 3rem;
+      gap: 1rem 3rem;
       justify-content: center;
 
       + ul {
@@ -186,6 +196,8 @@
   }
 
   &--sponsors {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     padding: 5rem 0;
 
     @media (min-width: 1000px) {
@@ -194,7 +206,7 @@
     }
 
     .container {
-      padding-right: 1rem;
+      grid-column: 2 / span 5;
     }
   }
 }

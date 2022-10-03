@@ -15,8 +15,9 @@
     grid-template-columns: 1fr auto;
 
     select {
-      grid-column: 2 / span 5;
+      grid-column: 1 / span 5;
       grid-row: 2;
+      margin-left: 1rem;
     }
 
     @media (min-width: 1000px) {
@@ -27,6 +28,7 @@
       select {
         grid-column: 5 / span 2;
         grid-row: 1;
+        margin: 0;
       }
     }
   }
@@ -49,6 +51,7 @@
   &--session {
     align-items: start;
     display: grid;
+    gap: 0 1rem;
   }
 
   &--title {

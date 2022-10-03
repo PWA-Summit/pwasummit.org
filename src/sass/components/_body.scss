@@ -24,6 +24,10 @@ body {
   @media (min-width: 757px) {
     --banner-m: 3;
   }
+
+  @media (min-width: 1200px) {
+    font-size: 1.56vw;
+  }
 }
 
 main {
@@ -39,17 +43,16 @@ main {
 }
 
 .container {
-  grid-column: 2 / span 5;
-  margin: 0 auto;
-  max-width: 1237px;
+  grid-column: 1 / span 7;
   padding: 0 1rem;
 
   @media (min-width: 1000px) {
-    padding: 0 285px 0 1rem;
-  }
+    grid-column: 2 / span 3;
+    padding: 0;
 
-  &--schedule {
-    padding-right: 1rem;
+    &--schedule {
+      grid-column: 2 / span 5;
+    }
   }
 }
 
