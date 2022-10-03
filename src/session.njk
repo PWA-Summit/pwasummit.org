@@ -1,5 +1,5 @@
 ---
-layout: wrapper.njk
+layout: markdown.njk
 pagination:
   data: sessionize.sessions
   size: 1
@@ -15,7 +15,6 @@ eleventyComputed:
 
 <div class="_session">
   <div class="_session--info">
-    <h1 class="type--h1">{{session.title}}</h1>
     <p class="sessions--start">
       {% date session.startsAt, {month: 'long', day: 'numeric', year: 'numeric'} %} | {% time
       session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt, {hour:
