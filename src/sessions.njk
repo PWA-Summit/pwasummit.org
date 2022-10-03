@@ -36,7 +36,8 @@ eleventyNavigation:
         <li class="sessions--session">
           <div class="sessions--info">
             <h3 class="sessions--title type--h3">
-              <a href="/sessions/{{ (session.title + session.speakers[0].name) | slugify }}"
+              <a
+                href="/sessions/{{ session.title | slugify }}-{{ session.speakers[0].name | slugify }}"
                 >{{session.title}}</a
               >
             </h3>

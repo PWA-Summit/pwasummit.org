@@ -46,7 +46,7 @@
       <td>
         <a
           class="schedule--link"
-          href="/sessions/{{ (session.title + session.speakers[0].name) | slugify }}"
+          href="/sessions/{{ session.title | slugify }}-{{ session.speakers[0].name | slugify }}"
           >{{session.title}}</a
         >
       </td>

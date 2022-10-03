@@ -4,7 +4,7 @@ pagination:
   data: sessionize.sessions
   size: 1
   alias: session
-permalink: sessions/{{ (session.title + session.speakers[0].name) | slugify }}/index.html
+permalink: sessions/{{ (session.title + '-' + session.speakers[0].name) | slugify }}/index.html
 eleventyComputed:
   ogimage: https://pwasummit.org/images/share/{{ session.id }}.jpg
   title: '{{session.title}}'
