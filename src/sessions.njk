@@ -47,10 +47,15 @@ eleventyNavigation:
           </div>
           <div class="sessions--desc type">{{session.description | md | safe }}</div>
 
+          {% set speakers = session | speakers(sessionize.speakers) %}
           <ul class="sessions--speakers">
-            {% for speaker in session | speakers(sessionize.speakers) %}
+            {% for speaker in speakers %}
             <li class="sessions--speaker">
+              {% if speaker.profilePicture %}
               <img class="sessions--picture" src="{{speaker.profilePicture}}" alt="" />
+              {% else %}
+              <img class="sessions--picture" src="/public/images/avatar.svg" alt="" />
+              {% endif %}
               <p class="sessions--name">{{speaker.fullName}}</p>
             </li>
             {% endfor %}
