@@ -2,15 +2,58 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  grid-column: 2 / span 5;
   list-style: none;
   margin: 0;
   margin-top: 2rem;
   padding: 0;
 
-  &--session {
+  &--header {
+    align-items: end;
     display: grid;
-    gap: 2rem;
-    @media (min-width: 615px) {
+    grid-column: 2 / span 5;
+    grid-template-columns: 1fr auto;
+
+    select {
+      grid-column: 1 / span 5;
+      grid-row: 2;
+      margin-left: 1rem;
+    }
+
+    @media (min-width: 1000px) {
+      &._markdown--header h1 {
+        grid-column: 2 / span 2;
+      }
+
+      select {
+        grid-column: 5 / span 2;
+        grid-row: 1;
+        margin: 0;
+      }
+    }
+  }
+
+  h2 {
+    color: var(--blue);
+    grid-column: 2 / span 5;
+  }
+
+  .sessions {
+    margin: 0;
+    padding: 0;
+  }
+
+  &--start {
+    margin: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  &--session {
+    align-items: start;
+    display: grid;
+    gap: 0 1rem;
+
+    @media (min-width: 640px) {
       grid-template-columns: 1fr 150px;
     }
   }
@@ -20,10 +63,10 @@
   }
 
   &--info {
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
   }
 
-  &--speakers {
+  & &--speakers {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -33,18 +76,19 @@
     margin: 0;
     padding: 0;
 
-    @media (min-width: 615px) {
+    @media (max-width: 730px) {
       flex-direction: column;
-      grid-column: 2 / span 1;
+      grid-column: 1 / span 2;
       justify-content: unset;
+      margin-top: 1rem;
     }
   }
 
   &--speaker {
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 0.5rem;
+    grid-template-columns: 1fr, auto;
   }
 
   &--picture {
@@ -54,6 +98,16 @@
   }
 
   &--name {
+    margin-top: 0;
     text-align: center;
+  }
+
+  &--desc {
+    margin: 0;
+
+    @media (max-width: 730px) {
+      flex-direction: column;
+      //grid-column: 2 / span 1;
+    }
   }
 }

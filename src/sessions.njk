@@ -3,47 +3,68 @@ layout: wrapper.njk
 title: Sessions
 eleventyNavigation:
   key: Sessions
-  parent: Disable
-  order: -2
+  parent: Main
+  order: 1
 ---
 
-<div class="sessions--header">
-  <h1 class="type--h1">Sessions</h1>
-  <select name="timezone" id="timezone">
-    <option value="local">Local</option>
-    <option value="GMT">GMT</option>
-    <option value="America/New_York">New York</option>
-    <option value="America/Los_Angeles">Los Angeles</option>
-  </select>
-</div>
+<article class="_markdown">
+  <header class="_markdown--header sessions--header">
+    <h1 class="type--h1">Sessions</h1>
+    <select name="timezone" id="timezone">
+      <option value="local">Local</option>
+      <option value="GMT">GMT</option>
+      <option value="Africa/Lagos">Lagos</option>
+      <option value="America/Los_Angeles">Los Angeles</option>
+      <option value="Africa/Nairobi">Nairobi</option>
+      <option value="America/New_York">New York</option>
+      <option value="America/Mexico_City">Mexico City</option>
+      <option value="America/Santiago">Santiago</option>
+      <option value="Asia/Shanghai">Shanghai</option>
+      <option value="Australia/Sydney">Sydney</option>
+      <option value="Asia/Tokyo">Tokyo</option>
+    </select>
+  </header>
+  <div class="type _markdown--body">
+    {% for day in sessionize.schedule %}
 
-{% for day in sessionize.schedule %}
-<h2 class="type--h2">
-  {% date day.date, {month: 'long', day: 'numeric', year: 'numeric', weekday: 'long'} %}
-</h2>
+    <div class="sessions">
+      <h2 class="type--h2">
+        {% date day.date, {month: 'long', day: 'numeric', year: 'numeric', weekday: 'long'} %}
+      </h2>
+      <ol class="sessions">
+        {% for session in day.rooms[0].sessions %} {% if session.isServiceSession == false %}
+        <li class="sessions--session">
+          <div class="sessions--info">
+            <h3 class="sessions--title type--h3">
+              <a
+                href="/sessions/{{ session.title | slugify }}-{{ session.speakers[0].name | slugify }}"
+                >{{session.title}}</a
+              >
+            </h3>
+            <p class="sessions--start">
+              {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time
+              session.endsAt, {hour: "numeric", minute: 'numeric'} %}
+            </p>
+          </div>
+          <div class="sessions--desc type">{{session.description | md | safe }}</div>
 
-<ol class="sessions">
-  {% for session in day.rooms[0].sessions %} {% if session.isServiceSession == false %}
-  <li class="sessions--session">
-    <div class="session--info">
-      <h3 class="sessions--title type--h3">
-        <a href="/sessions/{{session.title | slugify }}">{{session.title}}</a>
-      </h3>
-      <p class="sessions--start">
-        {% time session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt,
-        {hour: "numeric", minute: 'numeric'} %}
-      </p>
-      <div class="sessions--desc type">{{session.description | md | safe }}</div>
+          {% set speakers = session | speakers(sessionize.speakers) %}
+          <ul class="sessions--speakers">
+            {% for speaker in speakers %}
+            <li class="sessions--speaker">
+              {% if speaker.profilePicture %}
+              <img class="sessions--picture" src="{{speaker.profilePicture}}" alt="" />
+              {% else %}
+              <img class="sessions--picture" src="/public/images/avatar.svg" alt="" />
+              {% endif %}
+              <p class="sessions--name">{{speaker.fullName}}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %} {% endfor %}
+      </ol>
     </div>
-    <ul class="sessions--speakers">
-      {% for speaker in session | speakers(sessionize.speakers) %}
-      <li class="sessions--speaker">
-        <img class="sessions--picture" src="{{speaker.profilePicture}}" alt="" />
-        <p class="sessions--name">{{speaker.fullName}}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </li>
-  {% endif %} {% endfor %}
-</ol>
-{% endfor %}
+    {% endfor %}
+  </div>
+</article>

@@ -1,33 +1,40 @@
 ._home {
-  $width: bm(pxRem(2.6739px));
-  $rotate: -0deg;
+  background-color: var(--blue);
+  color: var(--white);
   display: grid;
-  grid-gap: 0;
-  grid-template-columns: #{$width} 0.5fr #{$width} 0.5fr #{$width} 1fr #{$width};
-  grid-template-rows: 3.6rem 2.4rem #{$width} min-content #{$width} auto 2.4rem 3.6rem;
+  grid-template-columns: repeat (7, 1fr);
 
-  margin: 5vh auto;
-  margin-bottom: 0;
-  //max-height: 55vh;
-  max-width: 700px;
-  // min-height: 30rem;
-  width: 100%;
+  &--promo-block {
+    grid-column: 1 / span 7;
+    grid-template-columns: inherit;
+    padding: 2rem 0;
 
-  @supports (width: clamp(1px, 1vw, 2px)) {
-    grid-template-rows:
-      clamp(2.4rem, 8vw, 3.6rem)
-      clamp(1.6rem, 8vw, 2.4rem)
-      #{$width} min-content #{$width} auto
-      clamp(1.6rem, 8vw, 2.4rem)
-      clamp(2.4rem, 8vw, 3.6rem);
+    @media (min-width: 1000px) {
+      padding: 4rem 0;
+    }
   }
 
-  @media (min-width: 618px) {
-    width: 80vw;
+  &--text {
+    grid-column: 1 / span 7;
+    padding: 0 1rem;
+
+    @media (min-width: 640px) {
+      grid-column: 1 / span 4;
+      padding: 0 0 0 1rem;
+    }
+
+    @media (min-width: 1000px) {
+      grid-column: 2 / span 3;
+      padding: 0;
+    }
   }
 
-  @media (min-width: 843px) {
-    width: 60vw;
+  @media (min-width: 768px) {
+    .container {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 3fr 1fr;
+    }
   }
 
   &--icon {
@@ -35,78 +42,35 @@
   }
 
   &--ctas {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    grid-column: 4 / span 3;
-    grid-row: 6 / span 1;
-
+    grid-column: 1 / span 7;
+    grid-row: 2;
+    justify-self: center;
     padding: 1rem;
-    padding-bottom: 0;
 
-    @media (min-width: 528px) {
-      grid-column: 6 / span 1;
-    }
-  }
-
-  &--save,
-  &--cfp {
-    align-items: center;
-    color: var(--white);
-    display: flex;
-    font-weight: var(--weight-bold);
-    gap: 1rem;
-    grid-column: 4 / span 3;
-    justify-content: flex-end;
-    text-align: right;
-    text-decoration: none;
-  }
-
-  &--save {
-    align-self: flex-end;
-    grid-row: 6 / span 1;
-  }
-
-  &--rect {
-    background-color: var(--white);
-    height: 100%;
-    width: 100%;
-
-    &__1,
-    &__2,
-    &__3,
-    &__4 {
-      grid-column: 1 / -1;
-      transform: rotate($rotate);
+    @media (min-width: 640px) {
+      align-self: center;
+      grid-column: 5 / span 3;
+      grid-row: 1;
+      justify-self: end;
+      padding: 0 1rem 0 0;
     }
 
-    &__4 {
-      grid-row: 5 / span 1;
+    @media (min-width: 1000px) {
+      grid-column: 5 / span 2;
+      padding: 0;
     }
 
-    &__5 {
-      grid-column: 1 / span 1;
-      grid-row: 1 / span 2;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    &__6 {
-      grid-column: 3 / span 1;
-      grid-row: 2 / span 1;
-      transform: translateY(#{$width});
-    }
-
-    &__7 {
-      grid-column: 3 / span 1;
-      grid-row: 5 / -1;
-
-      @media (min-width: 528px) {
-        grid-column: 5 / span 1;
-      }
-    }
-
-    &__8 {
-      grid-column: 7 / span 1;
-      grid-row: 6 / span 2;
+    a:link,
+    a:visited {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
     }
   }
 
@@ -118,63 +82,5 @@
     display: inline-block;
     height: 1px;
     width: 100%;
-  }
-
-  &--text {
-    grid-column: 2 / -2;
-    grid-row-start: 4;
-  }
-
-  &--title {
-    align-self: center;
-    display: flex;
-    font-family: 'Hepta Slab', serif;
-    font-size: 2.5rem;
-    font-weight: var(--weight-bold);
-
-    justify-content: space-between;
-    justify-self: center;
-    text-align: justify;
-    text-transform: uppercase;
-    transform: rotate($rotate);
-    width: 100%;
-
-    @media (min-width: 420px) {
-      font-size: 3.25rem;
-    }
-
-    @media (min-width: 700px) {
-      font-size: 4rem;
-    }
-  }
-
-  &--dates {
-    align-self: center;
-    display: flex;
-    font-family: 'Hepta Slab', serif;
-    font-size: 2rem;
-    font-variant: small-caps;
-    grid-column: 2 / -2;
-    grid-row-start: 6;
-    justify-content: space-between;
-    justify-self: center;
-    transform: rotate($rotate);
-    width: 100%;
-    @media (min-width: 700px) {
-      font-size: 3rem;
-    }
-  }
-
-  &--where {
-    align-self: center;
-    border-top: calc(#{$width}) solid var(--white);
-    font-size: 1.5rem;
-    grid-column: 2 / -2;
-    grid-row-start: 8;
-    letter-spacing: -1px;
-    padding: #{$width} 1rem;
-    text-align: justify;
-    transform: rotate($rotate) translatex(calc(#{$width} * -1));
-    width: calc(100% + #{$width} + #{$width});
   }
 }

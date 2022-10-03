@@ -41,6 +41,7 @@
     "@emmetio/expand-abbreviation": "^0.7.3",
     "@netlify/functions": "^0.7.2",
     "autoprefixer": "^10.2.6",
+    "eleventy-plugin-svg-contents": "^0.7.0",
     "eslint": "^7.26.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.3.0",
@@ -75,9 +76,9 @@
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0",
     "uslug": "^1.0.4",
-    "vite": "^2.3.3",
+    "vite": "^3.1.4",
     "vite-plugin-eleventy": "^0.0.9",
-    "vite-plugin-pwa": "^0.7.3"
+    "vite-plugin-pwa": "^0.13.1"
   },
   "dependencies": {
     "cloudinary": "^1.26.2",

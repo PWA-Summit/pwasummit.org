@@ -1,11 +1,55 @@
 ._markdown {
-  padding: 2rem 0;
+  display: grid;
+  grid-column: 1 / span 7;
+  grid-template-columns: repeat(7, 1fr);
 
-  &--header h1 {
-    margin-top: 0;
+  &--header {
+    align-items: center;
+    background: var(--blue);
+    color: var(--white);
+    display: grid;
+    grid-column: 1 / span 7;
+    grid-template-columns: inherit;
+    padding: 1rem 0 2rem;
+
+    h1 {
+      grid-column: 1 / span 7;
+      margin-top: 0;
+      padding: 0 1rem;
+    }
+
+    @media (min-width: 1000px) {
+      padding: 4rem 0;
+
+      h1 {
+        grid-column: 2 / span 5;
+        padding: 0;
+      }
+    }
+  }
+
+  .header-anchor {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &--body {
-    margin-top: 5rem;
+    grid-column: 1 / span 7;
+    margin-top: 2rem;
+    padding: 0 1rem;
+
+    @media (min-width: 1000px) {
+      grid-column: 2 / span 5;
+      margin-top: 5rem;
+      padding: 0;
+
+      &--schedule {
+        grid-column: 2 / span 5;
+      }
+    }
   }
 }

@@ -3,7 +3,7 @@ title: Code of Conduct
 layout: markdown.njk
 eleventyNavigation:
   key: Code of Conduct
-  parent: Main
+  parent: Footer
 ---
 
 ## PWA Summit is intended to be an inclusive, welcoming conference for everyone.

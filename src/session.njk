@@ -1,10 +1,10 @@
 ---
-layout: wrapper.njk
+layout: markdown.njk
 pagination:
   data: sessionize.sessions
   size: 1
   alias: session
-permalink: sessions/{{ session.title | slugify }}/index.html
+permalink: sessions/{{ (session.title + '-' + session.speakers[0].name) | slugify }}/index.html
 eleventyComputed:
   ogimage: https://pwasummit.org/images/share/{{ session.id }}.jpg
   title: '{{session.title}}'
@@ -15,26 +15,27 @@ eleventyComputed:
 
 <div class="_session">
   <div class="_session--info">
-    <h1 class="type--h1">{{session.title}}</h1>
     <p class="sessions--start">
-      {% date session.startsAt, {month: 'long', day: 'numeric', year: 'numeric'} %}, {% time
+      {% date session.startsAt, {month: 'long', day: 'numeric', year: 'numeric'} %} | {% time
       session.startsAt, {hour: "numeric", minute: 'numeric'} %} - {% time session.endsAt, {hour:
       "numeric", minute: 'numeric'} %} ({% timezone %})
     </p>
-    <div>{{session.description | md | safe }}</div>
+    <div class="_session--desc">{{session.description | md | safe }}</div>
   </div>
 
   <ul class="_session--speakers">
     {% for speaker in session | speakers(sessionize.speakers) %}
     <li class="_session--speaker">
-      <p class="_session--name type--h4">{{speaker.fullName}}</p>
       <img class="_session--picture" src="{{speaker.profilePicture}}" alt="" />
-      <p class="_session--tag">{{speaker.tagLine}}</p>
-      <div class="_session--speaker-links">{{ speakerLinks(speaker) }}</div>
+      <div>
+        <p class="_session--name type--h4">{{speaker.fullName}}</p>
+        <p class="_session--tag">{{speaker.tagLine}}</p>
+        <div class="_session--speaker-links">{{ speakerLinks(speaker) }}</div>
 
-      {% if speaker.tagLine != speaker.bio %}
-      <div class="_session--bio type">{{speaker.bio | md | safe }}</div>
-      {% endif %}
+        {% if speaker.tagLine != speaker.bio %}
+        <div class="_session--bio type">{{speaker.bio | md | safe }}</div>
+        {% endif %}
+      </div>
     </li>
     {% endfor %}
   </ul>

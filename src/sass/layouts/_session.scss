@@ -1,20 +1,14 @@
 ._session {
   display: grid;
-  grid-row-gap: 2rem;
-
-  @media (min-width: 615px) {
-    grid-template-columns: 4fr 2fr 2fr;
-  }
+  grid-column: 2 / span 5;
+  grid-row-gap: 5rem;
 
   .sessions--start {
-    margin: 1rem 0 0.5rem;
+    font-size: 1.75rem;
+    margin: 1rem 0;
   }
 
   &--info {
-    @media (min-width: 615px) {
-      grid-column: 1 / span 2;
-    }
-
     h1 {
       @media (max-width: 614px) {
         font-size: 3rem;
@@ -30,10 +24,12 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
 
-    @media (min-width: 615px) {
-      grid-column: 2 / span 2;
-    }
+  &--speaker {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto 1fr;
   }
 
   &--name {
@@ -44,6 +40,10 @@
   &--bio {
     font-size: 1rem;
     margin-top: 0.5rem;
+  }
+
+  &--bio {
+    text-align: justify;
   }
 
   &--tag {
@@ -57,9 +57,12 @@
   &--picture {
     border: 5px solid var(--stripe-1-1);
     border-radius: 50%;
-    float: right;
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
     max-width: 150px;
+  }
+
+  &--desc {
+    text-align: justify;
   }
 }

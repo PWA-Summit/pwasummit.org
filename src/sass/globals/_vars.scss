@@ -1,6 +1,6 @@
 @use 'sass:list';
 
-$stripes: ((#6b8b68 #759062), (#7a925e #8b9b52), (#96a04a #d7c11d), (#2a6b96 #0056b4));
+$stripes: ((#2a6b96 #0056b4), (#6b8b68 #759062), (#7a925e #8b9b52), (#96a04a #d7c11d));
 
 :root {
   @for $i from 1 through list.length($stripes) {
@@ -9,8 +9,10 @@ $stripes: ((#6b8b68 #759062), (#7a925e #8b9b52), (#96a04a #d7c11d), (#2a6b96 #00
     }
   }
 
-  --weight-bold: 500;
+  --weight-bold: 700;
   --weight-normal: 300;
   --white: hsl(180, 79%, 100%);
   --black: hsl(180, 79%, 5%);
+  --blue: #2355ad;
+  --gold: #f3b43f;
 }
