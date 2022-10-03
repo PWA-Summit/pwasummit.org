@@ -2,31 +2,28 @@
 layout: wrapper.njk
 ---
 
-<div class="_home promo-block">
-  <div class="container">
-    <div class="_home--text">
-      <h1>Join us at the PWA Summit</h1>
-      <p>
-        A free, online, single-track conference focused on helping everyone succeed with Progressive
-        Web Apps.
-      </p>
-    </div>
-
-    <nav class="_home--ctas">
-      <ul>
-        <li>
-          <a href="/register" class="_home--register">
-            {{ "/src/public/images/ticket.svg" | svgContents | safe }} Register for free
-          </a>
-        </li>
-        <li>
-          <a href="/pwa-summit.ics" class="_home--save">
-            {{ "/src/public/images/save.svg" | svgContents | safe }} Add to calendar
-          </a>
-        </li>
-      </ul>
-    </nav>
+<div class="_home _home--promo-block">
+  <div class="_home--text">
+    <h1>Join us at the PWA Summit</h1>
+    <p>
+      A free, online, single-track conference focused on helping everyone succeed with Progressive
+      Web Apps.
+    </p>
   </div>
+  <nav class="_home--ctas">
+    <ul>
+      <li>
+        <a href="/register" class="_home--register">
+          {{ "/src/public/images/ticket.svg" | svgContents | safe }} Register for free
+        </a>
+      </li>
+      <li>
+        <a href="/pwa-summit.ics" class="_home--save">
+          {{ "/src/public/images/save.svg" | svgContents | safe }} Add to calendar
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 
 <div class="container container--schedule">{% include "schedule.njk" %}</div>

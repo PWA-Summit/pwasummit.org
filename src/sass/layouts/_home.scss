@@ -1,9 +1,18 @@
 ._home {
   background-color: var(--blue);
   color: var(--white);
-  margin: 0 auto 5rem;
-  padding: 3rem 0;
-  width: 100%;
+  display: grid;
+  grid-template-columns: repeat (7, 1fr);
+
+  &--promo-block {
+    grid-column: 1 / span 7;
+    grid-template-columns: inherit;
+    padding: 2rem 0;
+  }
+
+  &--text {
+    grid-column: 2 / span 3;
+  }
 
   @media (min-width: 768px) {
     .container {
@@ -18,6 +27,9 @@
   }
 
   &--ctas {
+    grid-column: 5 / span 2;
+    padding-left: 2rem;
+
     ul {
       list-style: none;
       margin: 0;
