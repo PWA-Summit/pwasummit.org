@@ -9,11 +9,15 @@ export class TimezoneChanger {
    */
   constructor(changer) {
     this.changer = changer;
-    this.times = Array.from(document.querySelectorAll('[data-time]')).map((el) => ({
-      el,
-      date: new Date(el.dataset.time),
-      format: JSON.parse(el.dataset.format),
-    }));
+    this.times = Array.from(document.querySelectorAll('[data-time]')).map((el) => {
+      const date = new Date(el.dataset.time);
+      date.setUTCHours(date.getHours() + 7);
+      return {
+        el,
+        date: date,
+        format: JSON.parse(el.dataset.format),
+      };
+    });
     this.dates = Array.from(document.querySelectorAll('[data-date]')).map((el) => ({
       el,
       date: new Date(el.dataset.date),
