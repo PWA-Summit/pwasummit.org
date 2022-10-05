@@ -1,6 +1,7 @@
 .livestream {
   $width: bm(pxRem(2.6739px));
   margin-bottom: 3vh;
+  padding-top: 2rem;
   position: relative;
 
   @supports not (aspect-ratio: 16 / 9) {
