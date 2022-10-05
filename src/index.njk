@@ -26,4 +26,18 @@ layout: wrapper.njk
   </nav>
 </div>
 
-<div class="container container--schedule">{% include "schedule.njk" %}</div>
+<div class="container container--schedule">
+  <div class="livestream">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube-nocookie.com/embed/m-2lLWI_csE?controls=0"
+      title="YouTube video player"
+      frameborder="0"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  {% include "schedule.njk" %}
+</div>
